@@ -1,0 +1,196 @@
+{% extends "base.html" %}
+
+{% block title %}Analytics Dashboard{% endblock %}
+
+{% block content %}
+<div class="container py-4">
+    <div class="d-flex justify-content-between align-items-center mb-4">
+        <div>
+            <h2>Analytics Dashboard</h2>
+            <p class="text-muted mb-0">Monitor your AI customer support performance</p>
+        </div>
+        <div>
+            <select class="form-select" style="width: auto;">
+                <option>Last 7 days</option>
+                <option>Last 30 days</option>
+                <option>Last 90 days</option>
+            </select>
+        </div>
+    </div>
+    
+    <!-- Key Metrics -->
+    <div class="row g-4 mb-4">
+        <div class="col-md-3">
+            <div class="card">
+                <div class="card-body text-center">
+                    <i class="fas fa-comments text-primary mb-2" style="font-size: 2rem;"></i>
+                    <h3 class="mb-1">{{ analytics.total_conversations or 0 }}</h3>
+                    <small class="text-muted">Total Conversations</small>
+                    <div class="text-success small mt-1">
+                        <i class="fas fa-arrow-up me-1"></i>+12% vs last week
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-3">
+            <div class="card">
+                <div class="card-body text-center">
+                    <i class="fas fa-clock text-success mb-2" style="font-size: 2rem;"></i>
+                    <h3 class="mb-1">0.3s</h3>
+                    <small class="text-muted">Avg Response Time</small>
+                    <div class="text-success small mt-1">
+                        <i class="fas fa-arrow-down me-1"></i>-0.1s improvement
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-3">
+            <div class="card">
+                <div class="card-body text-center">
+                    <i class="fas fa-smile text-warning mb-2" style="font-size: 2rem;"></i>
+                    <h3 class="mb-1">94%</h3>
+                    <small class="text-muted">Satisfaction Rate</small>
+                    <div class="text-success small mt-1">
+                        <i class="fas fa-arrow-up me-1"></i>+2% vs last week
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-3">
+            <div class="card">
+                <div class="card-body text-center">
+                    <i class="fas fa-robot text-info mb-2" style="font-size: 2rem;"></i>
+                    <h3 class="mb-1">87%</h3>
+                    <small class="text-muted">AI Resolution Rate</small>
+                    <div class="text-success small mt-1">
+                        <i class="fas fa-arrow-up me-1"></i>+5% vs last week
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    <!-- Channel Breakdown -->
+    <div class="row g-4 mb-4">
+        <div class="col-md-6">
+            <div class="card">
+                <div class="card-header">
+                    <h6 class="mb-0"><i class="fas fa-chart-pie me-2"></i>Conversations by Channel</h6>
+                </div>
+                <div class="card-body">
+                    {% if analytics.channels %}
+                        {% for channel, count in analytics.channels.items() %}
+                        <div class="d-flex justify-content-between align-items-center mb-2">
+                            <div>
+                                {% if channel == 'whatsapp' %}
+                                    <i class="fab fa-whatsapp text-success me-2"></i>WhatsApp
+                                {% elif channel == 'email' %}
+                                    <i class="fas fa-envelope text-primary me-2"></i>Email
+                                {% else %}
+                                    <i class="fas fa-comments text-info me-2"></i>{{ channel|title }}
+                                {% endif %}
+                            </div>
+                            <div>
+                                <span class="badge bg-secondary">{{ count }}</span>
+                            </div>
+                        </div>
+                        {% endfor %}
+                    {% else %}
+                        <div class="text-center py-4">
+                            <i class="fas fa-chart-pie text-muted mb-3" style="font-size: 3rem;"></i>
+                            <h6>No data yet</h6>
+                            <p class="text-muted">Start conversations to see channel breakdown</p>
+                        </div>
+                    {% endif %}
+                </div>
+            </div>
+        </div>
+        
+        <div class="col-md-6">
+            <div class="card">
+                <div class="card-header">
+                    <h6 class="mb-0"><i class="fas fa-clock me-2"></i>Response Times</h6>
+                </div>
+                <div class="card-body">
+                    <div class="mb-3">
+                        <div class="d-flex justify-content-between">
+                            <span>AI Responses</span>
+                            <span class="text-success">0.3s avg</span>
+                        </div>
+                        <div class="progress" style="height: 8px;">
+                            <div class="progress-bar bg-success" style="width: 95%"></div>
+                        </div>
+                    </div>
+                    <div class="mb-3">
+                        <div class="d-flex justify-content-between">
+                            <span>Human Handoff</span>
+                            <span class="text-warning">2.5min avg</span>
+                        </div>
+                        <div class="progress" style="height: 8px;">
+                            <div class="progress-bar bg-warning" style="width: 70%"></div>
+                        </div>
+                    </div>
+                    <div class="mb-3">
+                        <div class="d-flex justify-content-between">
+                            <span>Email Responses</span>
+                            <span class="text-info">1.2min avg</span>
+                        </div>
+                        <div class="progress" style="height: 8px;">
+                            <div class="progress-bar bg-info" style="width: 85%"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    <!-- Recent Activity -->
+    <div class="card">
+        <div class="card-header">
+            <h6 class="mb-0"><i class="fas fa-history me-2"></i>Recent Conversations</h6>
+        </div>
+        <div class="card-body">
+            {% if analytics.total_conversations > 0 %}
+                <div class="table-responsive">
+                    <table class="table table-hover">
+                        <thead>
+                            <tr>
+                                <th>Time</th>
+                                <th>Channel</th>
+                                <th>Customer</th>
+                                <th>Query</th>
+                                <th>Response Time</th>
+                                <th>Status</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>2 min ago</td>
+                                <td><i class="fab fa-whatsapp text-success"></i> WhatsApp</td>
+                                <td>+91-98765-43210</td>
+                                <td>Shipping policy question</td>
+                                <td><span class="badge bg-success">0.2s</span></td>
+                                <td><span class="badge bg-success">Resolved</span></td>
+                            </tr>
+                            <tr>
+                                <td>5 min ago</td>
+                                <td><i class="fas fa-envelope text-primary"></i> Email</td>
+                                <td>customer@example.com</td>
+                                <td>Product inquiry</td>
+                                <td><span class="badge bg-success">0.4s</span></td>
+                                <td><span class="badge bg-success">Resolved</span></td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            {% else %}
+                <div class="text-center py-4">
+                    <i class="fas fa-history text-muted mb-3" style="font-size: 3rem;"></i>
+                    <h6>No conversations yet</h6>
+                    <p class="text-muted">Once customers start messaging, their conversations will appear here</p>
+                </div>
+            {% endif %}
+        </div>
+    </div>
+</div>
+{% endblock %}

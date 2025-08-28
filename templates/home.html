@@ -1,0 +1,289 @@
+{% extends "base.html" %}
+
+{% block title %}AI Customer Support - Turn Your Website Into Smart Support{% endblock %}
+
+{% block content %}
+<!-- Hero Section -->
+<section class="hero-section">
+    <div class="container">
+        <div class="row align-items-center">
+            <div class="col-lg-6">
+                <h1 class="display-4 fw-bold mb-4">
+                    Turn Your Website Into 
+                    <span class="text-warning">Smart Customer Support</span>
+                </h1>
+                <p class="lead mb-4">
+                    Zero setup required. Our AI automatically scrapes your website, creates a knowledge base, 
+                    and provides instant customer support via WhatsApp, Email, and Web Chat.
+                </p>
+                <div class="d-flex gap-3 mb-4">
+                    <a href="{{ url_for('signup') }}" class="btn btn-warning btn-lg px-4">
+                        <i class="fas fa-rocket me-2"></i>Start Free Trial
+                    </a>
+                    <a href="#features" class="btn btn-outline-light btn-lg px-4">
+                        <i class="fas fa-play me-2"></i>See How It Works
+                    </a>
+                </div>
+                <div class="d-flex align-items-center gap-4 text-sm">
+                    <span><i class="fas fa-check me-2"></i>No coding required</span>
+                    <span><i class="fas fa-check me-2"></i>Sub-second responses</span>
+                    <span><i class="fas fa-check me-2"></i>WhatsApp ready</span>
+                </div>
+            </div>
+            <div class="col-lg-6">
+                <div class="text-center">
+                    <img src="https://via.placeholder.com/500x400/667eea/ffffff?text=AI+Customer+Support+Demo" 
+                         alt="AI Customer Support Demo" class="img-fluid rounded-3 shadow-lg">
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Stats Section -->
+<section class="py-5 bg-white">
+    <div class="container">
+        <div class="row g-4">
+            <div class="col-md-3">
+                <div class="stats-card">
+                    <div class="stats-number">0.3s</div>
+                    <div class="text-muted">Response Time</div>
+                </div>
+            </div>
+            <div class="col-md-3">
+                <div class="stats-card">
+                    <div class="stats-number">24/7</div>
+                    <div class="text-muted">Availability</div>
+                </div>
+            </div>
+            <div class="col-md-3">
+                <div class="stats-card">
+                    <div class="stats-number">90%</div>
+                    <div class="text-muted">Cost Reduction</div>
+                </div>
+            </div>
+            <div class="col-md-3">
+                <div class="stats-card">
+                    <div class="stats-number">5min</div>
+                    <div class="text-muted">Setup Time</div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Features Section -->
+<section id="features" class="py-5">
+    <div class="container">
+        <div class="text-center mb-5">
+            <h2 class="display-5 fw-bold">How It Works</h2>
+            <p class="lead text-muted">Three simple steps to transform your customer support</p>
+        </div>
+        
+        <div class="row g-4">
+            <div class="col-lg-4">
+                <div class="card h-100 integration-card">
+                    <div class="card-body text-center p-4">
+                        <div class="feature-icon mx-auto mb-3">
+                            <i class="fas fa-globe"></i>
+                        </div>
+                        <h5 class="card-title">1. Enter Your Website</h5>
+                        <p class="card-text text-muted">
+                            Just provide your website URL. Our AI automatically scrapes all pages, 
+                            extracts content, and creates a comprehensive knowledge base.
+                        </p>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="col-lg-4">
+                <div class="card h-100 integration-card">
+                    <div class="card-body text-center p-4">
+                        <div class="feature-icon mx-auto mb-3">
+                            <i class="fas fa-brain"></i>
+                        </div>
+                        <h5 class="card-title">2. AI Learns Your Business</h5>
+                        <p class="card-text text-muted">
+                            Advanced AI processes your content, understands your products/services, 
+                            and generates intelligent Q&A pairs automatically.
+                        </p>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="col-lg-4">
+                <div class="card h-100 integration-card">
+                    <div class="card-body text-center p-4">
+                        <div class="feature-icon mx-auto mb-3">
+                            <i class="fab fa-whatsapp"></i>
+                        </div>
+                        <h5 class="card-title">3. Connect Channels</h5>
+                        <p class="card-text text-muted">
+                            Integrate with WhatsApp, Email, and Web Chat. Your AI assistant 
+                            provides instant, accurate responses 24/7.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Integration Channels -->
+<section class="py-5 bg-white">
+    <div class="container">
+        <div class="text-center mb-5">
+            <h2 class="display-5 fw-bold">Multi-Channel Support</h2>
+            <p class="lead text-muted">Reach your customers wherever they are</p>
+        </div>
+        
+        <div class="row g-4">
+            <div class="col-md-4">
+                <div class="card text-center h-100">
+                    <div class="card-body p-4">
+                        <div class="mb-3">
+                            <i class="fab fa-whatsapp text-success" style="font-size: 3rem;"></i>
+                        </div>
+                        <h5>WhatsApp Business</h5>
+                        <p class="text-muted">
+                            Connect with 60%+ of Indian customers on their preferred platform. 
+                            Multi-agent support with smart routing.
+                        </p>
+                        <ul class="list-unstyled text-start">
+                            <li><i class="fas fa-check text-success me-2"></i>Instant responses</li>
+                            <li><i class="fas fa-check text-success me-2"></i>Media support</li>
+                            <li><i class="fas fa-check text-success me-2"></i>Agent handoff</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="col-md-4">
+                <div class="card text-center h-100">
+                    <div class="card-body p-4">
+                        <div class="mb-3">
+                            <i class="fas fa-envelope text-primary" style="font-size: 3rem;"></i>
+                        </div>
+                        <h5>Email Support</h5>
+                        <p class="text-muted">
+                            Automatically monitor and respond to support emails with 
+                            professional, contextual replies.
+                        </p>
+                        <ul class="list-unstyled text-start">
+                            <li><i class="fas fa-check text-success me-2"></i>Auto-monitoring</li>
+                            <li><i class="fas fa-check text-success me-2"></i>HTML formatting</li>
+                            <li><i class="fas fa-check text-success me-2"></i>Thread tracking</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="col-md-4">
+                <div class="card text-center h-100">
+                    <div class="card-body p-4">
+                        <div class="mb-3">
+                            <i class="fas fa-comments text-info" style="font-size: 3rem;"></i>
+                        </div>
+                        <h5>Web Chat Widget</h5>
+                        <p class="text-muted">
+                            Embed intelligent chat widget on your website. 
+                            Captures leads and provides instant support.
+                        </p>
+                        <ul class="list-unstyled text-start">
+                            <li><i class="fas fa-check text-success me-2"></i>Easy embed</li>
+                            <li><i class="fas fa-check text-success me-2"></i>Lead capture</li>
+                            <li><i class="fas fa-check text-success me-2"></i>Customizable</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Pricing Section -->
+<section class="py-5">
+    <div class="container">
+        <div class="text-center mb-5">
+            <h2 class="display-5 fw-bold">Simple, Transparent Pricing</h2>
+            <p class="lead text-muted">Start free, scale as you grow</p>
+        </div>
+        
+        <div class="row g-4 justify-content-center">
+            <div class="col-lg-4">
+                <div class="card h-100">
+                    <div class="card-header text-center py-4">
+                        <h5 class="card-title">Free</h5>
+                        <div class="display-6 fw-bold">₹0</div>
+                        <div class="text-muted">per month</div>
+                    </div>
+                    <div class="card-body">
+                        <ul class="list-unstyled">
+                            <li class="mb-2"><i class="fas fa-check text-success me-2"></i>200 messages/month</li>
+                            <li class="mb-2"><i class="fas fa-check text-success me-2"></i>1 website</li>
+                            <li class="mb-2"><i class="fas fa-check text-success me-2"></i>Basic analytics</li>
+                            <li class="mb-2"><i class="fas fa-check text-success me-2"></i>Email support</li>
+                        </ul>
+                        <a href="{{ url_for('signup') }}" class="btn btn-outline-primary w-100">Get Started</a>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="col-lg-4">
+                <div class="card h-100 border-primary">
+                    <div class="card-header text-center py-4 bg-primary text-white">
+                        <h5 class="card-title">Growth</h5>
+                        <div class="display-6 fw-bold">₹5,999</div>
+                        <div class="text-light">per month</div>
+                        <span class="badge bg-warning text-dark">Most Popular</span>
+                    </div>
+                    <div class="card-body">
+                        <ul class="list-unstyled">
+                            <li class="mb-2"><i class="fas fa-check text-success me-2"></i>25,000 messages/month</li>
+                            <li class="mb-2"><i class="fas fa-check text-success me-2"></i>3 websites</li>
+                            <li class="mb-2"><i class="fas fa-check text-success me-2"></i>WhatsApp integration</li>
+                            <li class="mb-2"><i class="fas fa-check text-success me-2"></i>Advanced analytics</li>
+                            <li class="mb-2"><i class="fas fa-check text-success me-2"></i>Priority support</li>
+                        </ul>
+                        <a href="{{ url_for('signup') }}" class="btn btn-primary w-100">Start Free Trial</a>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="col-lg-4">
+                <div class="card h-100">
+                    <div class="card-header text-center py-4">
+                        <h5 class="card-title">Scale</h5>
+                        <div class="display-6 fw-bold">₹14,999</div>
+                        <div class="text-muted">per month</div>
+                    </div>
+                    <div class="card-body">
+                        <ul class="list-unstyled">
+                            <li class="mb-2"><i class="fas fa-check text-success me-2"></i>100,000 messages/month</li>
+                            <li class="mb-2"><i class="fas fa-check text-success me-2"></i>10 websites</li>
+                            <li class="mb-2"><i class="fas fa-check text-success me-2"></i>Multi-agent WhatsApp</li>
+                            <li class="mb-2"><i class="fas fa-check text-success me-2"></i>Custom integrations</li>
+                            <li class="mb-2"><i class="fas fa-check text-success me-2"></i>Dedicated support</li>
+                        </ul>
+                        <a href="{{ url_for('signup') }}" class="btn btn-outline-primary w-100">Contact Sales</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- CTA Section -->
+<section class="py-5 bg-primary text-white">
+    <div class="container text-center">
+        <h2 class="display-5 fw-bold mb-4">Ready to Transform Your Customer Support?</h2>
+        <p class="lead mb-4">Join hundreds of Indian businesses already using AI customer support</p>
+        <a href="{{ url_for('signup') }}" class="btn btn-warning btn-lg px-5">
+            <i class="fas fa-rocket me-2"></i>Start Your Free Trial
+        </a>
+        <div class="mt-4">
+            <small class="text-light">No credit card required • 5-minute setup • Cancel anytime</small>
+        </div>
+    </div>
+</section>
+{% endblock %}

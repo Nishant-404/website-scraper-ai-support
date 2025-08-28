@@ -1,0 +1,20 @@
+requests==2.31.0
+beautifulsoup4==4.12.2
+scrapy==2.11.0
+selenium==4.15.2
+lxml==4.9.3
+pandas==2.0.3
+numpy<2.0
+sentence-transformers==2.2.2
+transformers==4.35.2
+torch==2.1.1
+python-dotenv==1.0.0
+scikit-learn==1.3.2
+groq==0.4.1
+
+# Web Framework
+flask==2.3.3
+werkzeug==2.3.7
+
+# WhatsApp and Email Integration
+twilio==8.2.0

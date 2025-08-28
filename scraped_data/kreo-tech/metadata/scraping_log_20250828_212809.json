@@ -1,0 +1,23 @@
+{
+  "company_name": "kreo-tech",
+  "base_url": "https://kreo-tech.com",
+  "scraping_date": "2025-08-28T21:28:09.246325",
+  "pages_scraped": 10,
+  "total_content_length": 36776,
+  "unique_urls": [
+    "https://kreo-tech.com/cart",
+    "https://kreo-tech.com/policies/shipping-policy",
+    "https://kreo-tech.com/products/ikarus-black-wireless-gaming-mouse",
+    "https://kreo-tech.com/collections/kreo-x-naruto",
+    "https://kreo-tech.com#MainContent",
+    "https://kreo-tech.com/account/login",
+    "https://kreo-tech.com/products/noctus-gaming-chair",
+    "https://kreo-tech.com/products/mirage-wireless-rgb-gaming-controller-gamepad",
+    "https://kreo-tech.com",
+    "https://kreo-tech.com/collections/all"
+  ],
+  "data_files": {
+    "raw_data": "scraped_data\\kreo-tech\\raw_data\\scraped_20250828_212809.json",
+    "metadata": "scraped_data\\kreo-tech\\metadata\\scraping_log_20250828_212809.json"
+  }
+}

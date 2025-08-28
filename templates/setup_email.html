@@ -1,0 +1,223 @@
+{% extends "base.html" %}
+
+{% block title %}Email Integration Setup{% endblock %}
+
+{% block content %}
+<div class="container py-4">
+    <div class="row">
+        <div class="col-lg-8">
+            <!-- Header -->
+            <div class="d-flex align-items-center mb-4">
+                <div class="feature-icon me-3">
+                    <i class="fas fa-envelope"></i>
+                </div>
+                <div>
+                    <h2>Email Support Integration</h2>
+                    <p class="text-muted mb-0">Automatically monitor and respond to customer emails</p>
+                </div>
+            </div>
+            
+            <!-- Setup Form -->
+            <div class="card">
+                <div class="card-header">
+                    <h6 class="mb-0"><i class="fas fa-cog me-2"></i>Email Configuration</h6>
+                </div>
+                <div class="card-body">
+                    <form method="POST">
+                        <div class="mb-3">
+                            <label for="provider" class="form-label">Email Provider</label>
+                            <select class="form-select" id="provider" name="provider" onchange="updateSettings()">
+                                <option value="gmail">Gmail</option>
+                                <option value="outlook">Outlook/Hotmail</option>
+                                <option value="custom">Custom SMTP/IMAP</option>
+                            </select>
+                        </div>
+                        
+                        <div class="mb-3">
+                            <label for="email_address" class="form-label">Support Email Address</label>
+                            <input type="email" class="form-control" id="email_address" name="email_address" 
+                                   placeholder="support@yourcompany.com" required>
+                            <div class="form-text">This email will be monitored for incoming support requests</div>
+                        </div>
+                        
+                        <div class="mb-3">
+                            <label for="email_password" class="form-label">App Password</label>
+                            <input type="password" class="form-control" id="email_password" name="email_password" required>
+                            <div class="form-text" id="password-help">
+                                For Gmail: Generate an App Password (not your regular password)
+                            </div>
+                        </div>
+                        
+                        <!-- Advanced Settings -->
+                        <div class="card bg-light mb-3">
+                            <div class="card-body">
+                                <h6><i class="fas fa-sliders-h me-2"></i>Email Monitoring Settings</h6>
+                                <div class="row g-3">
+                                    <div class="col-md-6">
+                                        <label class="form-label">Check Interval</label>
+                                        <select class="form-select">
+                                            <option value="30">Every 30 seconds</option>
+                                            <option value="60">Every minute</option>
+                                            <option value="300">Every 5 minutes</option>
+                                        </select>
+                                    </div>
+                                    <div class="col-md-6">
+                                        <label class="form-label">Response Format</label>
+                                        <select class="form-select">
+                                            <option>HTML + Plain Text</option>
+                                            <option>Plain Text Only</option>
+                                        </select>
+                                    </div>
+                                </div>
+                                <div class="mt-3">
+                                    <div class="form-check">
+                                        <input class="form-check-input" type="checkbox" id="auto_reply" checked>
+                                        <label class="form-check-label" for="auto_reply">
+                                            Send automatic AI responses
+                                        </label>
+                                    </div>
+                                    <div class="form-check">
+                                        <input class="form-check-input" type="checkbox" id="mark_read" checked>
+                                        <label class="form-check-label" for="mark_read">
+                                            Mark emails as read after responding
+                                        </label>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="d-flex gap-2">
+                            <button type="submit" class="btn btn-primary">
+                                <i class="fas fa-envelope me-2"></i>Connect Email
+                            </button>
+                            <button type="button" class="btn btn-outline-secondary" onclick="testEmailConnection()">
+                                <i class="fas fa-test-tube me-2"></i>Test Connection
+                            </button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+        
+        <!-- Sidebar -->
+        <div class="col-lg-4">
+            <!-- Setup Guide -->
+            <div class="card mb-4">
+                <div class="card-header">
+                    <h6 class="mb-0"><i class="fas fa-book me-2"></i>Setup Guide</h6>
+                </div>
+                <div class="card-body">
+                    <div id="gmail-guide">
+                        <h6>Gmail Setup:</h6>
+                        <ol class="small">
+                            <li>Enable 2-Factor Authentication</li>
+                            <li>Go to Google Account settings</li>
+                            <li>Generate an App Password</li>
+                            <li>Use the App Password here</li>
+                        </ol>
+                    </div>
+                    <div id="outlook-guide" style="display: none;">
+                        <h6>Outlook Setup:</h6>
+                        <ol class="small">
+                            <li>Enable 2-Factor Authentication</li>
+                            <li>Go to Security settings</li>
+                            <li>Generate an App Password</li>
+                            <li>Use the App Password here</li>
+                        </ol>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Email Features -->
+            <div class="card">
+                <div class="card-header">
+                    <h6 class="mb-0"><i class="fas fa-star me-2"></i>Email Features</h6>
+                </div>
+                <div class="card-body">
+                    <ul class="list-unstyled">
+                        <li class="mb-2">
+                            <i class="fas fa-check text-success me-2"></i>
+                            <strong>Auto-Monitoring</strong><br>
+                            <small class="text-muted">Continuously checks for new emails</small>
+                        </li>
+                        <li class="mb-2">
+                            <i class="fas fa-check text-success me-2"></i>
+                            <strong>Smart Responses</strong><br>
+                            <small class="text-muted">AI generates contextual replies</small>
+                        </li>
+                        <li class="mb-2">
+                            <i class="fas fa-check text-success me-2"></i>
+                            <strong>HTML Formatting</strong><br>
+                            <small class="text-muted">Professional email templates</small>
+                        </li>
+                        <li class="mb-2">
+                            <i class="fas fa-check text-success me-2"></i>
+                            <strong>Thread Tracking</strong><br>
+                            <small class="text-muted">Maintains conversation context</small>
+                        </li>
+                        <li class="mb-2">
+                            <i class="fas fa-check text-success me-2"></i>
+                            <strong>Analytics</strong><br>
+                            <small class="text-muted">Response times and satisfaction</small>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+{% endblock %}
+
+{% block extra_js %}
+<script>
+function updateSettings() {
+    const provider = document.getElementById('provider').value;
+    const passwordHelp = document.getElementById('password-help');
+    const gmailGuide = document.getElementById('gmail-guide');
+    const outlookGuide = document.getElementById('outlook-guide');
+    
+    if (provider === 'gmail') {
+        passwordHelp.textContent = 'For Gmail: Generate an App Password (not your regular password)';
+        gmailGuide.style.display = 'block';
+        outlookGuide.style.display = 'none';
+    } else if (provider === 'outlook') {
+        passwordHelp.textContent = 'For Outlook: Generate an App Password (not your regular password)';
+        gmailGuide.style.display = 'none';
+        outlookGuide.style.display = 'block';
+    } else {
+        passwordHelp.textContent = 'Enter your email password or app-specific password';
+        gmailGuide.style.display = 'none';
+        outlookGuide.style.display = 'none';
+    }
+}
+
+async function testEmailConnection() {
+    const email = document.getElementById('email_address').value;
+    const password = document.getElementById('email_password').value;
+    
+    if (!email || !password) {
+        alert('Please enter your email credentials first');
+        return;
+    }
+    
+    const button = event.target;
+    const originalHTML = button.innerHTML;
+    button.innerHTML = '<i class="fas fa-spinner fa-spin me-2"></i>Testing...';
+    button.disabled = true;
+    
+    // Simulate test (in real implementation, make API call)
+    setTimeout(() => {
+        button.innerHTML = '<i class="fas fa-check me-2"></i>Connection Successful!';
+        button.classList.add('btn-success');
+        button.classList.remove('btn-outline-secondary');
+        
+        setTimeout(() => {
+            button.innerHTML = originalHTML;
+            button.classList.remove('btn-success');
+            button.classList.add('btn-outline-secondary');
+            button.disabled = false;
+        }, 3000);
+    }, 2000);
+}
+</script>
+{% endblock %}

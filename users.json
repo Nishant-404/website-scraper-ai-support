@@ -1,0 +1,25 @@
+{
+  "ns224466881616@gmail.com": {
+    "user_id": "e5495274-bde5-4039-9c83-dece9183d086",
+    "password_hash": "pbkdf2:sha256:600000$4NT5uKZwCwlpLtzJ$6db133acc5a7c151d7189f6fb5e21c1ecc3597ab7cfe18e509a867887f95f37d",
+    "company_name": "red dragon",
+    "website_url": "https://www.redragon.in/collections/keyboard?srsltid=AfmBOortoBFa4rMMM_CbAyVeh8W5iG18oWSBHyl2W60y4Te1J3RKpw4U",
+    "created_at": "2025-08-28T23:33:52.216580",
+    "plan": "free",
+    "integrations": {
+      "whatsapp": {
+        "enabled": false
+      },
+      "email": {
+        "enabled": true,
+        "email_address": "ns224466881616@gmail.com",
+        "password": "Villain@2005",
+        "provider": "gmail"
+      }
+    },
+    "usage": {
+      "messages_this_month": 0,
+      "websites_scraped": 0
+    }
+  }
+}

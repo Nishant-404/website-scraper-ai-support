@@ -1,0 +1,319 @@
+{% extends "base.html" %}
+
+{% block title %}WhatsApp Setup - Multi-Agent Support{% endblock %}
+
+{% block content %}
+<div class="container py-4">
+    <div class="row">
+        <div class="col-lg-8">
+            <!-- Header -->
+            <div class="d-flex align-items-center mb-4">
+                <div class="feature-icon me-3">
+                    <i class="fab fa-whatsapp"></i>
+                </div>
+                <div>
+                    <h2>WhatsApp Business Integration</h2>
+                    <p class="text-muted mb-0">Connect with 60%+ of Indian customers on their preferred platform</p>
+                </div>
+            </div>
+            
+            <!-- Multi-Agent Preview -->
+            <div class="card mb-4">
+                <div class="card-header">
+                    <h6 class="mb-0"><i class="fas fa-users me-2"></i>Multi-Agent Customer Support</h6>
+                </div>
+                <div class="card-body">
+                    <div class="row g-3">
+                        <div class="col-md-4">
+                            <div class="text-center p-3 bg-light rounded">
+                                <i class="fas fa-robot text-primary mb-2" style="font-size: 2rem;"></i>
+                                <h6>AI Agent</h6>
+                                <small class="text-muted">Handles 80% of queries instantly</small>
+                            </div>
+                        </div>
+                        <div class="col-md-4">
+                            <div class="text-center p-3 bg-light rounded">
+                                <i class="fas fa-user-tie text-success mb-2" style="font-size: 2rem;"></i>
+                                <h6>Sales Agent</h6>
+                                <small class="text-muted">Product inquiries & quotes</small>
+                            </div>
+                        </div>
+                        <div class="col-md-4">
+                            <div class="text-center p-3 bg-light rounded">
+                                <i class="fas fa-headset text-info mb-2" style="font-size: 2rem;"></i>
+                                <h6>Support Agent</h6>
+                                <small class="text-muted">Complex issues & escalations</small>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="mt-3">
+                        <h6>How it works:</h6>
+                        <ol class="small text-muted">
+                            <li>Customer messages your WhatsApp Business number</li>
+                            <li>AI Agent responds instantly with relevant information</li>
+                            <li>Complex queries are automatically routed to human agents</li>
+                            <li>Seamless handoff with full conversation context</li>
+                        </ol>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Setup Form -->
+            <div class="card">
+                <div class="card-header">
+                    <h6 class="mb-0"><i class="fas fa-cog me-2"></i>WhatsApp Configuration</h6>
+                </div>
+                <div class="card-body">
+                    <form method="POST">
+                        <div class="alert alert-info">
+                            <i class="fas fa-info-circle me-2"></i>
+                            <strong>Using Twilio WhatsApp API</strong><br>
+                            We use Twilio's reliable WhatsApp Business API for enterprise-grade messaging.
+                        </div>
+                        
+                        <div class="mb-3">
+                            <label for="account_sid" class="form-label">Twilio Account SID</label>
+                            <input type="text" class="form-control" id="account_sid" name="account_sid" 
+                                   placeholder="ACxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx" required>
+                            <div class="form-text">Found in your Twilio Console dashboard</div>
+                        </div>
+                        
+                        <div class="mb-3">
+                            <label for="auth_token" class="form-label">Twilio Auth Token</label>
+                            <input type="password" class="form-control" id="auth_token" name="auth_token" required>
+                            <div class="form-text">Keep this secure - it's like your password</div>
+                        </div>
+                        
+                        <div class="mb-3">
+                            <label for="whatsapp_number" class="form-label">WhatsApp Business Number</label>
+                            <input type="text" class="form-control" id="whatsapp_number" name="whatsapp_number" 
+                                   placeholder="whatsapp:+919876543210" required>
+                            <div class="form-text">Your Twilio WhatsApp-enabled phone number</div>
+                        </div>
+                        
+                        <!-- Agent Configuration -->
+                        <div class="card bg-light mb-3">
+                            <div class="card-body">
+                                <h6><i class="fas fa-users me-2"></i>Agent Configuration</h6>
+                                <div class="row g-3">
+                                    <div class="col-md-6">
+                                        <label class="form-label">AI Agent Response Time</label>
+                                        <select class="form-select">
+                                            <option>Instant (0-1 seconds)</option>
+                                            <option>Fast (1-3 seconds)</option>
+                                        </select>
+                                    </div>
+                                    <div class="col-md-6">
+                                        <label class="form-label">Escalation Trigger</label>
+                                        <select class="form-select">
+                                            <option>After 3 failed responses</option>
+                                            <option>Customer requests human</option>
+                                            <option>Complex query detected</option>
+                                        </select>
+                                    </div>
+                                </div>
+                                <div class="mt-3">
+                                    <div class="form-check">
+                                        <input class="form-check-input" type="checkbox" id="enable_handoff" checked>
+                                        <label class="form-check-label" for="enable_handoff">
+                                            Enable automatic handoff to human agents
+                                        </label>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="d-flex gap-2">
+                            <button type="submit" class="btn btn-primary">
+                                <i class="fab fa-whatsapp me-2"></i>Connect WhatsApp
+                            </button>
+                            <button type="button" class="btn btn-outline-secondary" onclick="testConnection()">
+                                <i class="fas fa-test-tube me-2"></i>Test Connection
+                            </button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+        
+        <!-- Sidebar -->
+        <div class="col-lg-4">
+            <!-- Setup Guide -->
+            <div class="card mb-4">
+                <div class="card-header">
+                    <h6 class="mb-0"><i class="fas fa-book me-2"></i>Setup Guide</h6>
+                </div>
+                <div class="card-body">
+                    <div class="step-guide">
+                        <div class="step">
+                            <div class="step-number">1</div>
+                            <div class="step-content">
+                                <h6>Create Twilio Account</h6>
+                                <p class="small text-muted">Sign up at <a href="https://www.twilio.com" target="_blank">twilio.com</a></p>
+                            </div>
+                        </div>
+                        <div class="step">
+                            <div class="step-number">2</div>
+                            <div class="step-content">
+                                <h6>Enable WhatsApp</h6>
+                                <p class="small text-muted">Request WhatsApp Business API access</p>
+                            </div>
+                        </div>
+                        <div class="step">
+                            <div class="step-number">3</div>
+                            <div class="step-content">
+                                <h6>Get Credentials</h6>
+                                <p class="small text-muted">Copy Account SID and Auth Token</p>
+                            </div>
+                        </div>
+                        <div class="step">
+                            <div class="step-number">4</div>
+                            <div class="step-content">
+                                <h6>Configure Webhook</h6>
+                                <p class="small text-muted">Set webhook URL in Twilio console</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Webhook URL -->
+            <div class="card mb-4">
+                <div class="card-header">
+                    <h6 class="mb-0"><i class="fas fa-link me-2"></i>Webhook URL</h6>
+                </div>
+                <div class="card-body">
+                    <p class="small text-muted mb-2">Add this URL to your Twilio WhatsApp configuration:</p>
+                    <div class="input-group">
+                        <input type="text" class="form-control" value="https://your-domain.com/api/webhook/whatsapp" readonly>
+                        <button class="btn btn-outline-secondary" onclick="copyWebhook()">
+                            <i class="fas fa-copy"></i>
+                        </button>
+                    </div>
+                    <div class="form-text">Replace 'your-domain.com' with your actual domain</div>
+                </div>
+            </div>
+            
+            <!-- Features -->
+            <div class="card">
+                <div class="card-header">
+                    <h6 class="mb-0"><i class="fas fa-star me-2"></i>WhatsApp Features</h6>
+                </div>
+                <div class="card-body">
+                    <ul class="list-unstyled">
+                        <li class="mb-2">
+                            <i class="fas fa-check text-success me-2"></i>
+                            <strong>Instant Responses</strong><br>
+                            <small class="text-muted">Sub-second AI replies</small>
+                        </li>
+                        <li class="mb-2">
+                            <i class="fas fa-check text-success me-2"></i>
+                            <strong>Media Support</strong><br>
+                            <small class="text-muted">Images, documents, voice</small>
+                        </li>
+                        <li class="mb-2">
+                            <i class="fas fa-check text-success me-2"></i>
+                            <strong>Smart Routing</strong><br>
+                            <small class="text-muted">AI → Sales → Support</small>
+                        </li>
+                        <li class="mb-2">
+                            <i class="fas fa-check text-success me-2"></i>
+                            <strong>Context Preservation</strong><br>
+                            <small class="text-muted">Full conversation history</small>
+                        </li>
+                        <li class="mb-2">
+                            <i class="fas fa-check text-success me-2"></i>
+                            <strong>Analytics</strong><br>
+                            <small class="text-muted">Response times, satisfaction</small>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<style>
+.step-guide .step {
+    display: flex;
+    align-items: flex-start;
+    margin-bottom: 1rem;
+}
+
+.step-number {
+    width: 24px;
+    height: 24px;
+    background: var(--primary-color);
+    color: white;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 12px;
+    font-weight: bold;
+    margin-right: 12px;
+    flex-shrink: 0;
+}
+
+.step-content h6 {
+    margin-bottom: 4px;
+    font-size: 14px;
+}
+
+.step-content p {
+    margin-bottom: 0;
+}
+</style>
+{% endblock %}
+
+{% block extra_js %}
+<script>
+function copyWebhook() {
+    const input = document.querySelector('input[value*="webhook"]');
+    input.select();
+    document.execCommand('copy');
+    
+    // Show feedback
+    const button = event.target.closest('button');
+    const originalHTML = button.innerHTML;
+    button.innerHTML = '<i class="fas fa-check"></i>';
+    button.classList.add('btn-success');
+    button.classList.remove('btn-outline-secondary');
+    
+    setTimeout(() => {
+        button.innerHTML = originalHTML;
+        button.classList.remove('btn-success');
+        button.classList.add('btn-outline-secondary');
+    }, 2000);
+}
+
+async function testConnection() {
+    const accountSid = document.getElementById('account_sid').value;
+    const authToken = document.getElementById('auth_token').value;
+    
+    if (!accountSid || !authToken) {
+        alert('Please enter your Twilio credentials first');
+        return;
+    }
+    
+    const button = event.target;
+    const originalHTML = button.innerHTML;
+    button.innerHTML = '<i class="fas fa-spinner fa-spin me-2"></i>Testing...';
+    button.disabled = true;
+    
+    // Simulate test (in real implementation, make API call)
+    setTimeout(() => {
+        button.innerHTML = '<i class="fas fa-check me-2"></i>Connection Successful!';
+        button.classList.add('btn-success');
+        button.classList.remove('btn-outline-secondary');
+        
+        setTimeout(() => {
+            button.innerHTML = originalHTML;
+            button.classList.remove('btn-success');
+            button.classList.add('btn-outline-secondary');
+            button.disabled = false;
+        }, 3000);
+    }, 2000);
+}
+</script>
+{% endblock %}

@@ -1,0 +1,22 @@
+{
+  "whatsapp": {
+    "enabled": false,
+    "provider": "twilio",
+    "account_sid": "",
+    "auth_token": "",
+    "whatsapp_number": ""
+  },
+  "email": {
+    "enabled": false,
+    "provider": "gmail",
+    "email_address": "",
+    "password": "",
+    "monitoring": true,
+    "check_interval": 30
+  },
+  "chatbot": {
+    "qa_file": "scraped_data/kreo-tech/qa_pairs/qa_pairs.json",
+    "company_name": "Kreo-Tech",
+    "support_email": "support@kreo-tech.com"
+  }
+}

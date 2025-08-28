@@ -1,0 +1,80 @@
+{% extends "base.html" %}
+
+{% block title %}Sign Up - AI Customer Support{% endblock %}
+
+{% block content %}
+<div class="container py-5">
+    <div class="row justify-content-center">
+        <div class="col-md-6">
+            <div class="card">
+                <div class="card-header text-center py-4">
+                    <h3><i class="fas fa-user-plus me-2"></i>Create Your Account</h3>
+                    <p class="text-muted mb-0">Start your free trial today</p>
+                </div>
+                <div class="card-body p-4">
+                    <form method="POST">
+                        <div class="mb-3">
+                            <label for="company_name" class="form-label">Company Name</label>
+                            <input type="text" class="form-control" id="company_name" name="company_name" required>
+                        </div>
+                        
+                        <div class="mb-3">
+                            <label for="website_url" class="form-label">Website URL</label>
+                            <input type="url" class="form-control" id="website_url" name="website_url" 
+                                   placeholder="https://your-website.com" required>
+                            <div class="form-text">We'll scrape this website to create your AI knowledge base</div>
+                        </div>
+                        
+                        <div class="mb-3">
+                            <label for="email" class="form-label">Email Address</label>
+                            <input type="email" class="form-control" id="email" name="email" required>
+                        </div>
+                        
+                        <div class="mb-3">
+                            <label for="password" class="form-label">Password</label>
+                            <input type="password" class="form-control" id="password" name="password" required>
+                        </div>
+                        
+                        <div class="mb-3 form-check">
+                            <input type="checkbox" class="form-check-input" id="terms" required>
+                            <label class="form-check-label" for="terms">
+                                I agree to the <a href="#" class="text-primary">Terms of Service</a> and 
+                                <a href="#" class="text-primary">Privacy Policy</a>
+                            </label>
+                        </div>
+                        
+                        <button type="submit" class="btn btn-primary w-100 py-2">
+                            <i class="fas fa-rocket me-2"></i>Create Account & Start Free Trial
+                        </button>
+                    </form>
+                    
+                    <div class="text-center mt-4">
+                        <p class="text-muted">Already have an account? 
+                            <a href="{{ url_for('login') }}" class="text-primary">Sign in</a>
+                        </p>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Features -->
+            <div class="row mt-4">
+                <div class="col-md-4 text-center">
+                    <i class="fas fa-clock text-primary mb-2" style="font-size: 2rem;"></i>
+                    <h6>5-Minute Setup</h6>
+                    <small class="text-muted">Get started instantly</small>
+                </div>
+                <div class="col-md-4 text-center">
+                    <i class="fas fa-shield-alt text-success mb-2" style="font-size: 2rem;"></i>
+                    <h6>Secure & Private</h6>
+                    <small class="text-muted">Your data is protected</small>
+                </div>
+                <div class="col-md-4 text-center">
+                    <i class="fas fa-headset text-info mb-2" style="font-size: 2rem;"></i>
+                    <h6>24/7 Support</h6>
+                    <small class="text-muted">We're here to help</small>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+{% endblock %}

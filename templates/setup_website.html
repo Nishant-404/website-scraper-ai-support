@@ -1,0 +1,90 @@
+{% extends "base.html" %}
+
+{% block title %}Website Setup{% endblock %}
+
+{% block content %}
+<div class="container py-4">
+    <div class="row">
+        <div class="col-lg-8">
+            <!-- Header -->
+            <div class="d-flex align-items-center mb-4">
+                <div class="feature-icon me-3">
+                    <i class="fas fa-globe"></i>
+                </div>
+                <div>
+                    <h2>Website Content Scraping</h2>
+                    <p class="text-muted mb-0">Let AI learn about your business from your website</p>
+                </div>
+            </div>
+            
+            <!-- Setup Form -->
+            <div class="card">
+                <div class="card-header">
+                    <h6 class="mb-0"><i class="fas fa-cog me-2"></i>Website Configuration</h6>
+                </div>
+                <div class="card-body">
+                    <form method="POST">
+                        <div class="mb-3">
+                            <label for="website_url" class="form-label">Website URL</label>
+                            <input type="url" class="form-control" id="website_url" name="website_url" 
+                                   placeholder="https://your-website.com" required>
+                            <div class="form-text">We'll automatically scrape all pages to create your knowledge base</div>
+                        </div>
+                        
+                        <div class="card bg-light mb-3">
+                            <div class="card-body">
+                                <h6><i class="fas fa-sliders-h me-2"></i>Scraping Settings</h6>
+                                <div class="row g-3">
+                                    <div class="col-md-6">
+                                        <label class="form-label">Max Pages</label>
+                                        <select class="form-select">
+                                            <option value="100">100 pages (Free)</option>
+                                            <option value="500">500 pages (Growth)</option>
+                                            <option value="unlimited">Unlimited (Scale)</option>
+                                        </select>
+                                    </div>
+                                    <div class="col-md-6">
+                                        <label class="form-label">Update Frequency</label>
+                                        <select class="form-select">
+                                            <option value="manual">Manual only</option>
+                                            <option value="daily">Daily</option>
+                                            <option value="weekly">Weekly</option>
+                                        </select>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="d-flex gap-2">
+                            <button type="submit" class="btn btn-primary">
+                                <i class="fas fa-globe me-2"></i>Start Scraping
+                            </button>
+                            <button type="button" class="btn btn-outline-secondary">
+                                <i class="fas fa-eye me-2"></i>Preview Content
+                            </button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+        
+        <!-- Sidebar -->
+        <div class="col-lg-4">
+            <div class="card">
+                <div class="card-header">
+                    <h6 class="mb-0"><i class="fas fa-info-circle me-2"></i>How It Works</h6>
+                </div>
+                <div class="card-body">
+                    <ol class="small">
+                        <li>AI crawls your website automatically</li>
+                        <li>Extracts content from all pages</li>
+                        <li>Creates structured Q&A pairs</li>
+                        <li>Builds intelligent knowledge base</li>
+                        <li>Ready for customer support</li>
+                    </ol>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+{% endblock %}
