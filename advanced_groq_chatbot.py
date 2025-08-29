@@ -13,6 +13,7 @@ from sklearn.metrics.pairwise import cosine_similarity
 import numpy as np
 from dotenv import load_dotenv
 import logging
+from product_query_filter import ProductQueryFilter
 from datetime import datetime
 
 # Load environment variables
@@ -29,13 +30,15 @@ logging.basicConfig(
 )
 
 class AdvancedGroqChatbot:
-    def __init__(self, qa_file: str = "scraped_data/kreo-tech/qa_pairs/qa_pairs.json"):
+    def __init__(self, qa_file: str = None, user_id: int = None):
         """Initialize the advanced Groq-powered chatbot"""
         self.api_key = os.getenv('GROQ_API_KEY')
         if not self.api_key:
             raise ValueError("GROQ_API_KEY not found in environment variables")
         
         self.client = Groq(api_key=self.api_key)
+        self.query_filter = ProductQueryFilter()
+        self.user_id = user_id
         self.qa_file = qa_file
         self.qa_pairs = []
         self.vectorizer = TfidfVectorizer(
@@ -53,9 +56,12 @@ class AdvancedGroqChatbot:
         self.max_tokens = int(os.getenv('GROQ_MAX_TOKENS', '200'))
         
         # Load Q&A data and create embeddings
-        self.load_qa_data()
-        if self.qa_pairs:
-            self.create_embeddings()
+        if self.qa_file and os.path.exists(self.qa_file):
+            self.load_qa_data()
+            if self.qa_pairs:
+                self.create_embeddings()
+        else:
+            logging.warning("No Q&A file provided or file doesn't exist")
         
         logging.info(f"Chatbot initialized with {len(self.qa_pairs)} Q&A pairs")
     
@@ -117,7 +123,8 @@ class AdvancedGroqChatbot:
     
     def create_system_prompt(self, relevant_context: List[Dict], user_question: str) -> str:
         """Create enhanced system prompt with relevant context"""
-        base_prompt = """You are a customer support assistant for Kreo-Tech.
+        company_name = getattr(self, 'company_name', 'our company')
+        base_prompt = f"""You are a customer support assistant for {company_name}.
 
 INSTRUCTIONS:
 1. Give concise, direct answers using the provided context
@@ -126,7 +133,7 @@ INSTRUCTIONS:
 4. If no specific info is available, say so briefly
 5. Focus on the most important details only
 
-COMPANY: Kreo-Tech specializes in construction technology and engineering solutions.
+COMPANY: {company_name} - providing excellent products and services to our customers.
 
 """
         
@@ -147,6 +154,20 @@ COMPANY: Kreo-Tech specializes in construction technology and engineering soluti
         start_time = datetime.now()
         
         try:
+            # Filter query to ensure it's product-related
+            should_process, filtered_response = self.query_filter.filter_query(user_question)
+            
+            if not should_process:
+                # Return standard response for non-product queries
+                return {
+                    'response': filtered_response,
+                    'relevant_context': [],
+                    'model_used': self.model,
+                    'response_time': (datetime.now() - start_time).total_seconds(),
+                    'success': True,
+                    'filtered': True
+                }
+            
             # Find relevant context
             relevant_context = self.find_relevant_context(user_question)
             
@@ -194,9 +215,10 @@ COMPANY: Kreo-Tech specializes in construction technology and engineering soluti
     
     def chat_loop(self):
         """Interactive chat loop with enhanced UI"""
-        print("🚀 Kreo-Tech AI Customer Support - Powered by Groq")
+        company_name = getattr(self, 'company_name', 'AI Customer Support')
+        print(f"🚀 {company_name} - Powered by Groq")
         print("=" * 60)
-        print("Ask me anything about Kreo-Tech's products, services, or policies!")
+        print(f"Ask me anything about {company_name}'s products, services, or policies!")
         print("Type 'quit', 'exit', or 'bye' to end the conversation")
         print("Type 'help' for usage tips")
         print("=" * 60)
@@ -208,7 +230,8 @@ COMPANY: Kreo-Tech specializes in construction technology and engineering soluti
                 user_input = input(f"\n👤 You: ").strip()
                 
                 if user_input.lower() in ['quit', 'exit', 'bye', 'q']:
-                    print(f"\n🤖 Thank you for using Kreo-Tech support! We had {conversation_count} exchanges.")
+                    company_name = getattr(self, 'company_name', 'our support')
+                    print(f"\n🤖 Thank you for using {company_name}! We had {conversation_count} exchanges.")
                     print("Have a great day! 👋")
                     break
                 
@@ -216,7 +239,8 @@ COMPANY: Kreo-Tech specializes in construction technology and engineering soluti
                     print("\n📋 Usage Tips:")
                     print("• Ask about products, services, pricing, or policies")
                     print("• Be specific for better results (e.g., 'shipping policy' vs 'shipping')")
-                    print("• I can help with technical questions about Kreo-Tech solutions")
+                    company_name = getattr(self, 'company_name', 'our company')
+                    print(f"• I can help with technical questions about {company_name} solutions")
                     print("• Type 'quit' to exit")
                     continue
                 
@@ -229,7 +253,8 @@ COMPANY: Kreo-Tech specializes in construction technology and engineering soluti
                 result = self.get_response(user_input)
                 conversation_count += 1
                 
-                print(f"\n🤖 Kreo-Tech Assistant:")
+                company_name = getattr(self, 'company_name', 'AI Assistant')
+                print(f"\n🤖 {company_name}:")
                 print("-" * 40)
                 print(result['response'])
                 

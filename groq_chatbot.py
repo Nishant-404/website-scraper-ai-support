@@ -13,7 +13,7 @@ from sklearn.metrics.pairwise import cosine_similarity
 import numpy as np
 
 class GroqChatbot:
-    def __init__(self, api_key: str, qa_file: str = "scraped_data/kreo-tech/qa_pairs/qa_pairs.json"):
+    def __init__(self, api_key: str, qa_file: str = None, company_name: str = "AI Assistant"):
         """Initialize the Groq-powered chatbot"""
         self.client = Groq(api_key=api_key)
         self.qa_file = qa_file
@@ -82,7 +82,8 @@ class GroqChatbot:
     
     def create_system_prompt(self, relevant_context: List[Dict]) -> str:
         """Create system prompt with relevant context"""
-        base_prompt = """You are a customer support assistant for Kreo-Tech.
+        company_name = getattr(self, 'company_name', 'our company')
+        base_prompt = f"""You are a customer support assistant for {company_name}.
 
 Instructions:
 1. Give concise, direct answers (max 150 words)
@@ -144,7 +145,8 @@ Instructions:
     
     def chat_loop(self):
         """Interactive chat loop"""
-        print("🤖 Kreo-Tech AI Customer Support")
+        company_name = getattr(self, 'company_name', 'AI Customer Support')
+        print(f"🤖 {company_name}")
         print("Type 'quit', 'exit', or 'bye' to end the conversation")
         print("-" * 50)
         
@@ -153,7 +155,8 @@ Instructions:
                 user_input = input("\n👤 You: ").strip()
                 
                 if user_input.lower() in ['quit', 'exit', 'bye', 'q']:
-                    print("\n🤖 Thank you for using Kreo-Tech support! Have a great day!")
+                    company_name = getattr(self, 'company_name', 'our support')
+                    print(f"\n🤖 Thank you for using {company_name}! Have a great day!")
                     break
                 
                 if not user_input:

@@ -67,9 +67,9 @@ class IntegrationManager:
                 "check_interval": 30
             },
             "chatbot": {
-                "qa_file": "scraped_data/kreo-tech/qa_pairs/qa_pairs.json",
-                "company_name": "Kreo-Tech",
-                "support_email": os.getenv('SUPPORT_EMAIL', 'support@kreo-tech.com')
+                "qa_file": None,  # Will be set per user
+                "company_name": "AI Assistant",  # Will be set per user
+                "support_email": os.getenv('SUPPORT_EMAIL', 'support@company.com')
             }
         }
         

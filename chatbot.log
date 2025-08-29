@@ -1,240 +1,259 @@
-2025-08-28 22:27:30,095 - INFO - Loaded 1657 Q&A pairs
-2025-08-28 22:27:30,110 - INFO - Created question embeddings successfully
-2025-08-28 22:27:30,110 - INFO - Chatbot initialized with 1657 Q&A pairs
-2025-08-28 22:27:30,111 - ERROR - Error generating response: The truth value of an array with more than one element is ambiguous. Use a.any() or a.all().
-2025-08-28 22:27:30,112 - ERROR - Error generating response: The truth value of an array with more than one element is ambiguous. Use a.any() or a.all().
-2025-08-28 22:27:30,113 - ERROR - Error generating response: The truth value of an array with more than one element is ambiguous. Use a.any() or a.all().
-2025-08-28 22:27:30,114 - ERROR - Error generating response: The truth value of an array with more than one element is ambiguous. Use a.any() or a.all().
-2025-08-28 22:27:30,116 - ERROR - Error generating response: The truth value of an array with more than one element is ambiguous. Use a.any() or a.all().
-2025-08-28 22:27:48,646 - INFO - Loaded 1657 Q&A pairs
-2025-08-28 22:27:48,660 - INFO - Created question embeddings successfully
-2025-08-28 22:27:48,661 - INFO - Chatbot initialized with 1657 Q&A pairs
-2025-08-28 22:27:48,663 - INFO - Found 5 relevant context items
-2025-08-28 22:27:49,179 - INFO - HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
-2025-08-28 22:27:49,187 - INFO - Response generated in 0.52s for question: What are your shipping policies?...
-2025-08-28 22:27:49,192 - INFO - Found 5 relevant context items
-2025-08-28 22:27:49,757 - INFO - HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
-2025-08-28 22:27:49,760 - INFO - Response generated in 0.57s for question: Tell me about your gaming mice...
-2025-08-28 22:27:49,761 - INFO - Found 5 relevant context items
-2025-08-28 22:27:50,155 - INFO - HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
-2025-08-28 22:27:50,157 - INFO - Response generated in 0.40s for question: How much does shipping cost?...
-2025-08-28 22:27:50,160 - INFO - Found 5 relevant context items
-2025-08-28 22:27:50,490 - INFO - HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
-2025-08-28 22:27:50,493 - INFO - Response generated in 0.33s for question: Do you offer free shipping?...
-2025-08-28 22:27:50,496 - INFO - Found 0 relevant context items
-2025-08-28 22:27:50,852 - INFO - HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
-2025-08-28 22:27:50,853 - INFO - Response generated in 0.36s for question: What construction software do you have?...
-2025-08-28 22:34:02,307 - INFO - Loaded 1657 Q&A pairs
-2025-08-28 22:34:02,322 - INFO - Created question embeddings successfully
-2025-08-28 22:34:02,323 - INFO - Chatbot initialized with 1657 Q&A pairs
-2025-08-28 22:34:02,325 - INFO - Found 5 relevant context items
-2025-08-28 22:34:02,649 - INFO - HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
-2025-08-28 22:34:02,659 - INFO - Response generated in 0.33s for question: What are your shipping policies?...
-2025-08-28 22:34:02,663 - INFO - Found 5 relevant context items
-2025-08-28 22:34:02,997 - INFO - HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
-2025-08-28 22:34:02,999 - INFO - Response generated in 0.34s for question: Tell me about your gaming mice...
-2025-08-28 22:34:03,001 - INFO - Found 5 relevant context items
-2025-08-28 22:34:03,302 - INFO - HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
-2025-08-28 22:34:03,303 - INFO - Response generated in 0.30s for question: How much does shipping cost?...
-2025-08-28 22:34:03,306 - INFO - Found 5 relevant context items
-2025-08-28 22:34:03,552 - INFO - HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
-2025-08-28 22:34:03,553 - INFO - Response generated in 0.25s for question: Do you offer free shipping?...
-2025-08-28 22:34:03,555 - INFO - Found 0 relevant context items
-2025-08-28 22:34:03,814 - INFO - HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
-2025-08-28 22:34:03,816 - INFO - Response generated in 0.26s for question: What construction software do you have?...
-2025-08-28 22:37:35,699 - INFO - Loaded 1657 Q&A pairs
-2025-08-28 22:37:35,714 - INFO - Created question embeddings successfully
-2025-08-28 22:37:35,715 - INFO - Chatbot initialized with 1657 Q&A pairs
-2025-08-28 22:37:52,780 - INFO - Found 5 relevant context items
-2025-08-28 22:37:53,302 - INFO - HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
-2025-08-28 22:37:53,310 - INFO - Response generated in 0.53s for question: hi tell me why ikarus is better mouse than pegasus...
-2025-08-28 22:38:27,173 - INFO - Found 5 relevant context items
-2025-08-28 22:38:27,385 - INFO - HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
-2025-08-28 22:38:27,386 - INFO - Response generated in 0.22s for question: pegasus is also wireless mouse...
-2025-08-28 22:38:42,989 - INFO - Found 5 relevant context items
-2025-08-28 22:38:43,297 - INFO - HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
-2025-08-28 22:38:43,299 - INFO - Response generated in 0.31s for question: which keyboard should i buy ?...
-2025-08-28 22:39:13,510 - INFO - Found 0 relevant context items
-2025-08-28 22:39:14,172 - INFO - HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
-2025-08-28 22:39:14,174 - INFO - Response generated in 0.66s for question: i am more of a coder who likes the sound of the ke...
-2025-08-28 23:18:14,693 - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+2025-08-29 20:22:48,335 - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
  * Running on all addresses (0.0.0.0)
  * Running on http://127.0.0.1:5000
  * Running on http://192.168.1.6:5000
-2025-08-28 23:18:14,694 - INFO - [33mPress CTRL+C to quit[0m
-2025-08-28 23:18:14,697 - INFO -  * Restarting with stat
-2025-08-28 23:18:16,481 - WARNING -  * Debugger is active!
-2025-08-28 23:18:16,485 - INFO -  * Debugger PIN: 176-284-469
-2025-08-28 23:18:25,443 - INFO - 127.0.0.1 - - [28/Aug/2025 23:18:25] "[31m[1mGET /api/webhook/whatsapp HTTP/1.1[0m" 405 -
-2025-08-28 23:18:25,596 - INFO - 127.0.0.1 - - [28/Aug/2025 23:18:25] "[33mGET /favicon.ico HTTP/1.1[0m" 404 -
-2025-08-28 23:20:53,664 - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+2025-08-29 20:22:48,335 - INFO - [33mPress CTRL+C to quit[0m
+2025-08-29 20:22:48,337 - INFO -  * Restarting with stat
+2025-08-29 20:22:50,345 - WARNING -  * Debugger is active!
+2025-08-29 20:22:50,350 - INFO -  * Debugger PIN: 106-401-541
+2025-08-29 20:22:54,030 - INFO - 127.0.0.1 - - [29/Aug/2025 20:22:54] "GET / HTTP/1.1" 200 -
+2025-08-29 20:23:02,764 - INFO - 127.0.0.1 - - [29/Aug/2025 20:23:02] "GET /signup HTTP/1.1" 200 -
+2025-08-29 20:23:25,350 - INFO - 127.0.0.1 - - [29/Aug/2025 20:23:25] "[32mPOST /signup HTTP/1.1[0m" 302 -
+2025-08-29 20:23:25,650 - INFO - 127.0.0.1 - - [29/Aug/2025 20:23:25] "GET /login HTTP/1.1" 200 -
+2025-08-29 20:23:33,016 - INFO - 127.0.0.1 - - [29/Aug/2025 20:23:33] "[32mPOST /login HTTP/1.1[0m" 302 -
+2025-08-29 20:23:33,035 - INFO - 127.0.0.1 - - [29/Aug/2025 20:23:33] "GET /dashboard HTTP/1.1" 200 -
+2025-08-29 20:23:33,359 - INFO - 127.0.0.1 - - [29/Aug/2025 20:23:33] "GET /api/scraping-status HTTP/1.1" 200 -
+2025-08-29 20:23:44,319 - INFO - 127.0.0.1 - - [29/Aug/2025 20:23:44] "GET /api/scraping-status HTTP/1.1" 200 -
+2025-08-29 20:23:49,579 - INFO - 127.0.0.1 - - [29/Aug/2025 20:23:49] "GET /dashboard HTTP/1.1" 200 -
+2025-08-29 20:23:49,879 - INFO - 127.0.0.1 - - [29/Aug/2025 20:23:49] "GET /api/scraping-status HTTP/1.1" 200 -
+2025-08-29 20:23:56,651 - INFO - 127.0.0.1 - - [29/Aug/2025 20:23:56] "GET /dashboard HTTP/1.1" 200 -
+2025-08-29 20:23:56,833 - INFO - 127.0.0.1 - - [29/Aug/2025 20:23:56] "GET /api/scraping-status HTTP/1.1" 200 -
+2025-08-29 20:24:07,014 - INFO - 127.0.0.1 - - [29/Aug/2025 20:24:07] "GET /api/scraping-status HTTP/1.1" 200 -
+2025-08-29 20:24:17,001 - INFO - 127.0.0.1 - - [29/Aug/2025 20:24:17] "GET /api/scraping-status HTTP/1.1" 200 -
+2025-08-29 20:24:27,003 - INFO - 127.0.0.1 - - [29/Aug/2025 20:24:27] "GET /api/scraping-status HTTP/1.1" 200 -
+2025-08-29 20:24:37,313 - INFO - 127.0.0.1 - - [29/Aug/2025 20:24:37] "GET /api/scraping-status HTTP/1.1" 200 -
+2025-08-29 20:24:47,002 - INFO - 127.0.0.1 - - [29/Aug/2025 20:24:47] "GET /api/scraping-status HTTP/1.1" 200 -
+2025-08-29 20:24:57,314 - INFO - 127.0.0.1 - - [29/Aug/2025 20:24:57] "GET /api/scraping-status HTTP/1.1" 200 -
+2025-08-29 20:25:07,014 - INFO - 127.0.0.1 - - [29/Aug/2025 20:25:07] "GET /api/scraping-status HTTP/1.1" 200 -
+2025-08-29 20:25:17,320 - INFO - 127.0.0.1 - - [29/Aug/2025 20:25:17] "GET /api/scraping-status HTTP/1.1" 200 -
+2025-08-29 20:25:23,430 - WARNING - No Q&A file found for user 1
+2025-08-29 20:25:24,006 - WARNING - No Q&A file provided or file doesn't exist
+2025-08-29 20:25:24,007 - INFO - Chatbot initialized with 0 Q&A pairs
+2025-08-29 20:25:24,007 - INFO - Query analysis: QueryAnalysis(is_product_related=True, confidence=1.0, category='greeting', intent='greeting', suggested_response="Hello! I'm here to help you with questions about our products. What would you like to know?")
+2025-08-29 20:25:24,523 - INFO - HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
+2025-08-29 20:25:24,532 - INFO - Response generated in 0.53s for question: What are your shipping policies?...
+2025-08-29 20:25:24,537 - INFO - 127.0.0.1 - - [29/Aug/2025 20:25:24] "POST /api/test-message HTTP/1.1" 200 -
+2025-08-29 20:25:27,007 - INFO - 127.0.0.1 - - [29/Aug/2025 20:25:27] "GET /api/scraping-status HTTP/1.1" 200 -
+2025-08-29 20:25:36,700 - INFO - 127.0.0.1 - - [29/Aug/2025 20:25:36] "GET /api/scraping-status HTTP/1.1" 200 -
+2025-08-29 20:25:47,015 - INFO - 127.0.0.1 - - [29/Aug/2025 20:25:47] "GET /api/scraping-status HTTP/1.1" 200 -
+2025-08-29 20:25:47,812 - INFO - Query analysis: QueryAnalysis(is_product_related=False, confidence=0.0, category='general', intent='general_inquiry', suggested_response="I'm here to help you with product-related questions. Please ask me about our products, their features, pricing, or availability.")
+2025-08-29 20:25:47,816 - INFO - 127.0.0.1 - - [29/Aug/2025 20:25:47] "POST /api/test-message HTTP/1.1" 200 -
+2025-08-29 20:25:52,275 - INFO - Query analysis: QueryAnalysis(is_product_related=False, confidence=0.0, category='general', intent='general_inquiry', suggested_response="I'm here to help you with product-related questions. Please ask me about our products, their features, pricing, or availability.")
+2025-08-29 20:25:52,281 - INFO - 127.0.0.1 - - [29/Aug/2025 20:25:52] "POST /api/test-message HTTP/1.1" 200 -
+2025-08-29 20:25:56,648 - INFO - Query analysis: QueryAnalysis(is_product_related=True, confidence=1.0, category='greeting', intent='greeting', suggested_response="Hello! I'm here to help you with questions about our products. What would you like to know?")
+2025-08-29 20:25:56,913 - INFO - HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
+2025-08-29 20:25:56,914 - INFO - Response generated in 0.27s for question: tell me about hive...
+2025-08-29 20:25:56,919 - INFO - 127.0.0.1 - - [29/Aug/2025 20:25:56] "POST /api/test-message HTTP/1.1" 200 -
+2025-08-29 20:25:57,017 - INFO - 127.0.0.1 - - [29/Aug/2025 20:25:57] "GET /api/scraping-status HTTP/1.1" 200 -
+2025-08-29 20:26:07,313 - INFO - 127.0.0.1 - - [29/Aug/2025 20:26:07] "GET /api/scraping-status HTTP/1.1" 200 -
+2025-08-29 20:26:17,005 - INFO - 127.0.0.1 - - [29/Aug/2025 20:26:17] "GET /api/scraping-status HTTP/1.1" 200 -
+2025-08-29 20:27:35,907 - INFO - Starting product scraping for user 2: https://redragon.in/collections/keyboard
+2025-08-29 20:27:35,909 - INFO - Cleared existing data for user 2
+2025-08-29 20:27:35,910 - INFO - Starting product scraping for https://redragon.in/collections/keyboard
+2025-08-29 20:27:40,394 - INFO - Found 48 products so far from https://redragon.in/collections/keyboard
+2025-08-29 20:27:40,394 - INFO - Found 48 product URLs
+2025-08-29 20:27:40,395 - INFO - Scraping product 1/48: https://redragon.in/products/ucal-pro-k673-pro-75-wired-2-4ghz-bt-mechanical-keyboard-anime-theme-custom-hi-fi-linear-switch
+2025-08-29 20:27:41,948 - INFO - Scraping product 2/48: https://redragon.in/products/draconic-pro-k530-pro-60-bluetooth-2-4hz-wired-mechanical-keyboard-red-switch
+2025-08-29 20:27:43,532 - INFO - Scraping product 3/48: https://redragon.in/products/vara-k551-rainbow-gaming-keyboard
+2025-08-29 20:27:45,066 - INFO - Scraping product 4/48: https://redragon.in/collections/keyboards-under-3000
+2025-08-29 20:27:46,662 - INFO - Scraping product 5/48: https://redragon.in/products/fizz-pro-k616-60-wired-2-4ghz-bt-mechanical-keyboard-black-red-switch
+2025-08-29 20:27:48,205 - INFO - Scraping product 6/48: https://redragon.in/collections/keyboards-under-4000
+2025-08-29 20:27:49,753 - INFO - Scraping product 7/48: https://redragon.in/products/mitra-k551-rgb-gaming-keyboard
+2025-08-29 20:27:51,331 - INFO - Scraping product 8/48: https://redragon.in/products/vata-k580-rgb-mechanical
+2025-08-29 20:27:52,853 - INFO - Scraping product 9/48: https://redragon.in/products/devarajas-k556-mechanical-keyboard-brown-switch
+2025-08-29 20:27:54,381 - INFO - Scraping product 10/48: https://redragon.in/pages/product-registration
+2025-08-29 20:27:55,747 - INFO - Scraping product 11/48: https://redragon.in/products/kumara-k552-rgb-gaming-keyboard
+2025-08-29 20:27:57,242 - INFO - Scraping product 12/48: https://redragon.in/products/kumara-k552-rgb-white-mechanical
+2025-08-29 20:27:58,715 - INFO - Scraping product 13/48: https://redragon.in/collections/keyboard
+2025-08-29 20:28:00,250 - INFO - Scraping product 14/48: https://redragon.in/products/kumara-k552-rainbow-gaming-keyboard
+2025-08-29 20:28:01,913 - INFO - Scraping product 15/48: https://redragon.in/products/vishnu-k596-pro-bluetooth-2-4ghz-wired-mechanical-keyboard-red-switch
+2025-08-29 20:28:03,457 - INFO - Scraping product 16/48: https://redragon.in/collections/new-arrivals
+2025-08-29 20:28:04,939 - INFO - Scraping product 17/48: https://redragon.in/products/horus-k621-tkl-wired-2-4g-bt-mechanical-keyboard-white-red-switch
+2025-08-29 20:28:06,454 - INFO - Scraping product 18/48: https://redragon.in/products/aditiya-k513-104-keys-linear-mechanical-feel-keyboard-new
+2025-08-29 20:28:07,960 - INFO - Scraping product 19/48: https://redragon.in/products/fizz-pro-k616-60-wired-2-4ghz-bt-mechanical-keyboard-grey-and-white-red-switch
+2025-08-29 20:28:09,432 - INFO - Scraping product 20/48: https://redragon.in/products/castro-k631-se-65-bluetooth-2-4ghz-wired-mechanical-keyboard-custome-switch
+2025-08-29 20:28:11,018 - INFO - Scraping product 21/48: https://redragon.in/products/dharma-pro-k556-pro-104-keys-bluetooth-2-4ghz-wired-mechanical-keyboard-quiet-linear-red-switch
+2025-08-29 20:28:12,570 - INFO - Scraping product 22/48: https://redragon.in/collections/keyboards-under-6000
+2025-08-29 20:28:14,049 - INFO - Scraping product 23/48: https://redragon.in/products/shiva-k512-membrane-gaming-keyboard
+2025-08-29 20:28:15,596 - INFO - Scraping product 24/48: https://redragon.in/collections/mouse
+2025-08-29 20:28:17,162 - INFO - Scraping product 25/48: https://redragon.in/products/ucal-pro-k673-pro-75-wired-2-4ghz-bt-mechanical-keyboard-white-and-black-linear-red-switch
+2025-08-29 20:28:18,714 - INFO - Scraping product 26/48: https://redragon.in/collections/keyboards-under-2000
+2025-08-29 20:28:20,217 - INFO - Scraping product 27/48: https://redragon.in/products/castor-k631-pro-65-bluetooth-2-4ghz-wireless-wired-rgb-mechanical-keyboard-red-switch
+2025-08-29 20:28:21,776 - INFO - Scraping product 28/48: https://redragon.in/products/fizz-k617-60-wired-mechanical-keyboard-black-magnetic-switch
+2025-08-29 20:28:23,453 - INFO - Scraping product 29/48: https://redragon.in/products/dragon-born-k630-mechanical-keyboard-pink-led-brown-switch
+2025-08-29 20:28:24,967 - INFO - Scraping product 30/48: https://redragon.in/collections/headset
+2025-08-29 20:28:26,371 - INFO - Scraping product 31/48: https://redragon.in/collections/keyboards-under-5000
+2025-08-29 20:28:27,933 - INFO - Scraping product 32/48: https://redragon.in/products/surara-k582-rgb-gaming-keyboard
+2025-08-29 20:28:29,483 - INFO - Scraping product 33/48: https://redragon.in/products/k686-eisa-pro-wired-2-4ghz-bt-mechanical-keyboard-anime-theme-custom-hi-fi-linear-switch
+2025-08-29 20:28:31,541 - INFO - Scraping product 34/48: https://redragon.in/products/diti-k585-rgb-mechanical-blue-switches
+2025-08-29 20:28:33,055 - INFO - Scraping product 35/48: https://redragon.in/collections/speakers
+2025-08-29 20:28:34,418 - INFO - Scraping product 36/48: https://redragon.in/products/trundle-k688-104-keys-wired-mechanical-keyboard-white-black-orange-red-switch
+2025-08-29 20:28:35,962 - INFO - Scraping product 37/48: https://redragon.in/products/dyaus-pro-k509-104-keys-rgb-wired-keyboard-without-side-led-mechanical-feel
+2025-08-29 20:30:06,213 - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
  * Running on all addresses (0.0.0.0)
  * Running on http://127.0.0.1:5000
  * Running on http://192.168.1.6:5000
-2025-08-28 23:20:53,664 - INFO - [33mPress CTRL+C to quit[0m
-2025-08-28 23:20:53,666 - INFO -  * Restarting with stat
-2025-08-28 23:20:55,329 - WARNING -  * Debugger is active!
-2025-08-28 23:20:55,333 - INFO -  * Debugger PIN: 176-284-469
-2025-08-28 23:20:58,432 - INFO - 127.0.0.1 - - [28/Aug/2025 23:20:58] "[31m[1mGET /api/webhook/whatsapp HTTP/1.1[0m" 405 -
-2025-08-28 23:23:16,408 - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
- * Running on all addresses (0.0.0.0)
- * Running on http://127.0.0.1:5000
- * Running on http://192.168.1.6:5000
-2025-08-28 23:23:16,409 - INFO - [33mPress CTRL+C to quit[0m
-2025-08-28 23:23:16,410 - INFO -  * Restarting with stat
-2025-08-28 23:23:18,079 - WARNING -  * Debugger is active!
-2025-08-28 23:23:18,082 - INFO -  * Debugger PIN: 176-284-469
-2025-08-28 23:23:27,621 - INFO - 127.0.0.1 - - [28/Aug/2025 23:23:27] "[31m[1mGET /api/webhook/whatsapp HTTP/1.1[0m" 405 -
-2025-08-28 23:26:50,803 - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
- * Running on all addresses (0.0.0.0)
- * Running on http://127.0.0.1:5000
- * Running on http://192.168.1.6:5000
-2025-08-28 23:26:50,803 - INFO - [33mPress CTRL+C to quit[0m
-2025-08-28 23:26:50,804 - INFO -  * Restarting with stat
-2025-08-28 23:26:52,553 - WARNING -  * Debugger is active!
-2025-08-28 23:26:52,558 - INFO -  * Debugger PIN: 176-284-469
-2025-08-28 23:26:55,368 - INFO - 127.0.0.1 - - [28/Aug/2025 23:26:55] "[31m[1mGET /api/webhook/whatsapp HTTP/1.1[0m" 405 -
-2025-08-28 23:26:59,550 - INFO - 127.0.0.1 - - [28/Aug/2025 23:26:59] "[31m[1mGET /api/webhook/whatsapp HTTP/1.1[0m" 405 -
-2025-08-28 23:32:17,039 - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
- * Running on all addresses (0.0.0.0)
- * Running on http://127.0.0.1:5000
- * Running on http://192.168.1.6:5000
-2025-08-28 23:32:17,039 - INFO - [33mPress CTRL+C to quit[0m
-2025-08-28 23:32:17,040 - INFO -  * Restarting with stat
-2025-08-28 23:32:18,941 - WARNING -  * Debugger is active!
-2025-08-28 23:32:18,945 - INFO -  * Debugger PIN: 176-284-469
-2025-08-28 23:32:28,282 - INFO - 127.0.0.1 - - [28/Aug/2025 23:32:28] "GET / HTTP/1.1" 200 -
-2025-08-28 23:32:44,711 - INFO - 127.0.0.1 - - [28/Aug/2025 23:32:44] "GET /signup HTTP/1.1" 200 -
-2025-08-28 23:33:52,218 - INFO - 127.0.0.1 - - [28/Aug/2025 23:33:52] "[32mPOST /signup HTTP/1.1[0m" 302 -
-2025-08-28 23:33:52,230 - INFO - 127.0.0.1 - - [28/Aug/2025 23:33:52] "GET /login HTTP/1.1" 200 -
-2025-08-28 23:33:59,643 - INFO - 127.0.0.1 - - [28/Aug/2025 23:33:59] "[32mPOST /login HTTP/1.1[0m" 302 -
-2025-08-28 23:34:00,223 - INFO - Loaded 1657 Q&A pairs
-2025-08-28 23:34:00,245 - INFO - Created question embeddings successfully
-2025-08-28 23:34:00,245 - INFO - Chatbot initialized with 1657 Q&A pairs
-2025-08-28 23:34:00,369 - INFO - Found 0 relevant context items
-2025-08-28 23:34:00,889 - INFO - HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
-2025-08-28 23:34:00,900 - INFO - Response generated in 0.53s for question: Hello, this is a test message...
-2025-08-28 23:34:00,909 - INFO - 127.0.0.1 - - [28/Aug/2025 23:34:00] "GET /dashboard HTTP/1.1" 200 -
-2025-08-28 23:34:15,545 - INFO - 127.0.0.1 - - [28/Aug/2025 23:34:15] "GET /setup-whatsapp HTTP/1.1" 200 -
-2025-08-28 23:34:50,706 - INFO - Found 0 relevant context items
-2025-08-28 23:34:50,934 - INFO - HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
-2025-08-28 23:34:50,935 - INFO - Response generated in 0.23s for question: Hello, this is a test message...
-2025-08-28 23:34:50,936 - INFO - 127.0.0.1 - - [28/Aug/2025 23:34:50] "GET /dashboard HTTP/1.1" 200 -
-2025-08-28 23:34:51,437 - INFO - 127.0.0.1 - - [28/Aug/2025 23:34:51] "GET / HTTP/1.1" 200 -
-2025-08-28 23:34:53,063 - INFO - Found 0 relevant context items
-2025-08-28 23:34:53,251 - INFO - HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
-2025-08-28 23:34:53,252 - INFO - Response generated in 0.19s for question: Hello, this is a test message...
-2025-08-28 23:34:53,253 - INFO - 127.0.0.1 - - [28/Aug/2025 23:34:53] "GET /dashboard HTTP/1.1" 200 -
-2025-08-28 23:34:54,759 - INFO - 127.0.0.1 - - [28/Aug/2025 23:34:54] "GET / HTTP/1.1" 200 -
-2025-08-28 23:35:18,531 - INFO - 127.0.0.1 - - [28/Aug/2025 23:35:18] "GET /signup HTTP/1.1" 200 -
-2025-08-28 23:35:22,132 - INFO - 127.0.0.1 - - [28/Aug/2025 23:35:22] "GET /setup-whatsapp HTTP/1.1" 200 -
-2025-08-28 23:36:14,309 - INFO - 127.0.0.1 - - [28/Aug/2025 23:36:14] "GET /analytics HTTP/1.1" 200 -
-2025-08-28 23:36:23,763 - INFO - 127.0.0.1 - - [28/Aug/2025 23:36:23] "GET /setup-whatsapp HTTP/1.1" 200 -
-2025-08-28 23:36:25,883 - INFO - 127.0.0.1 - - [28/Aug/2025 23:36:25] "GET /setup-email HTTP/1.1" 200 -
-2025-08-28 23:37:02,863 - INFO - 127.0.0.1 - - [28/Aug/2025 23:37:02] "[32mPOST /setup-email HTTP/1.1[0m" 302 -
-2025-08-28 23:37:02,871 - INFO - Found 0 relevant context items
-2025-08-28 23:37:03,169 - INFO - HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
-2025-08-28 23:37:03,170 - INFO - Response generated in 0.30s for question: Hello, this is a test message...
-2025-08-28 23:37:03,171 - INFO - 127.0.0.1 - - [28/Aug/2025 23:37:03] "GET /dashboard HTTP/1.1" 200 -
-2025-08-28 23:37:14,388 - INFO - 127.0.0.1 - - [28/Aug/2025 23:37:14] "GET /setup-website HTTP/1.1" 200 -
-2025-08-28 23:37:24,259 - INFO - 127.0.0.1 - - [28/Aug/2025 23:37:24] "[32mPOST /setup-website HTTP/1.1[0m" 302 -
-2025-08-28 23:37:24,270 - INFO - Found 0 relevant context items
-2025-08-28 23:37:24,673 - INFO - HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
-2025-08-28 23:37:24,674 - INFO - Response generated in 0.41s for question: Hello, this is a test message...
-2025-08-28 23:37:24,675 - INFO - 127.0.0.1 - - [28/Aug/2025 23:37:24] "GET /dashboard HTTP/1.1" 200 -
-2025-08-28 23:38:19,708 - INFO - Found 5 relevant context items
-2025-08-28 23:38:20,077 - INFO - HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
-2025-08-28 23:38:20,078 - INFO - Response generated in 0.37s for question: What are your shipping policies?...
-2025-08-28 23:38:20,079 - INFO - 127.0.0.1 - - [28/Aug/2025 23:38:20] "POST /api/test-message HTTP/1.1" 200 -
-2025-08-28 23:48:34,804 - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
- * Running on all addresses (0.0.0.0)
- * Running on http://127.0.0.1:5000
- * Running on http://192.168.1.6:5000
-2025-08-28 23:48:34,805 - INFO - [33mPress CTRL+C to quit[0m
-2025-08-28 23:48:34,807 - INFO -  * Restarting with stat
-2025-08-28 23:48:36,896 - WARNING -  * Debugger is active!
-2025-08-28 23:48:36,901 - INFO -  * Debugger PIN: 176-284-469
-2025-08-28 23:48:42,416 - INFO - 127.0.0.1 - - [28/Aug/2025 23:48:42] "GET / HTTP/1.1" 200 -
-2025-08-28 23:50:18,325 - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
- * Running on all addresses (0.0.0.0)
- * Running on http://127.0.0.1:5000
- * Running on http://192.168.1.6:5000
-2025-08-28 23:50:18,325 - INFO - [33mPress CTRL+C to quit[0m
-2025-08-28 23:50:18,326 - INFO -  * Restarting with stat
-2025-08-28 23:50:20,820 - WARNING -  * Debugger is active!
-2025-08-28 23:50:20,825 - INFO -  * Debugger PIN: 176-284-469
-2025-08-28 23:50:56,675 - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
- * Running on all addresses (0.0.0.0)
- * Running on http://127.0.0.1:5000
- * Running on http://192.168.1.6:5000
-2025-08-28 23:50:56,675 - INFO - [33mPress CTRL+C to quit[0m
-2025-08-28 23:50:56,680 - INFO -  * Restarting with stat
-2025-08-28 23:51:00,085 - INFO - 127.0.0.1 - - [28/Aug/2025 23:51:00] "GET /signup HTTP/1.1" 200 -
-2025-08-28 23:51:00,193 - WARNING -  * Debugger is active!
-2025-08-28 23:51:00,200 - INFO -  * Debugger PIN: 176-284-469
-2025-08-28 23:51:09,751 - INFO - 127.0.0.1 - - [28/Aug/2025 23:51:09] "POST /signup HTTP/1.1" 200 -
-2025-08-28 23:51:12,177 - INFO - 127.0.0.1 - - [28/Aug/2025 23:51:12] "GET /login HTTP/1.1" 200 -
-2025-08-28 23:51:18,548 - INFO - 127.0.0.1 - - [28/Aug/2025 23:51:18] "[32mPOST /login HTTP/1.1[0m" 302 -
-2025-08-28 23:51:19,172 - INFO - Loaded 1657 Q&A pairs
-2025-08-28 23:51:19,188 - INFO - Created question embeddings successfully
-2025-08-28 23:51:19,188 - INFO - Chatbot initialized with 1657 Q&A pairs
-2025-08-28 23:51:19,207 - INFO - Found 0 relevant context items
-2025-08-28 23:51:19,528 - INFO - HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
-2025-08-28 23:51:19,546 - INFO - Response generated in 0.34s for question: Hello, this is a test message...
-2025-08-28 23:51:19,555 - INFO - 127.0.0.1 - - [28/Aug/2025 23:51:19] "GET /dashboard HTTP/1.1" 200 -
-2025-08-28 23:51:20,138 - INFO - 127.0.0.1 - - [28/Aug/2025 23:51:20] "GET /api/scraping-status HTTP/1.1" 200 -
-2025-08-28 23:51:29,625 - INFO - 127.0.0.1 - - [28/Aug/2025 23:51:29] "GET /api/scraping-status HTTP/1.1" 200 -
-2025-08-28 23:51:39,927 - INFO - 127.0.0.1 - - [28/Aug/2025 23:51:39] "GET /api/scraping-status HTTP/1.1" 200 -
-2025-08-28 23:51:49,623 - INFO - 127.0.0.1 - - [28/Aug/2025 23:51:49] "GET /api/scraping-status HTTP/1.1" 200 -
-2025-08-28 23:52:00,336 - INFO - 127.0.0.1 - - [28/Aug/2025 23:52:00] "GET /api/scraping-status HTTP/1.1" 200 -
-2025-08-28 23:52:10,001 - INFO - 127.0.0.1 - - [28/Aug/2025 23:52:10] "GET /api/scraping-status HTTP/1.1" 200 -
-2025-08-28 23:52:19,922 - INFO - 127.0.0.1 - - [28/Aug/2025 23:52:19] "GET /api/scraping-status HTTP/1.1" 200 -
-2025-08-28 23:52:29,625 - INFO - 127.0.0.1 - - [28/Aug/2025 23:52:29] "GET /api/scraping-status HTTP/1.1" 200 -
-2025-08-28 23:52:40,308 - INFO - 127.0.0.1 - - [28/Aug/2025 23:52:40] "GET /api/scraping-status HTTP/1.1" 200 -
-2025-08-28 23:52:49,999 - INFO - 127.0.0.1 - - [28/Aug/2025 23:52:49] "GET /api/scraping-status HTTP/1.1" 200 -
-2025-08-28 23:53:00,304 - INFO - 127.0.0.1 - - [28/Aug/2025 23:53:00] "GET /api/scraping-status HTTP/1.1" 200 -
-2025-08-28 23:53:10,013 - INFO - 127.0.0.1 - - [28/Aug/2025 23:53:10] "GET /api/scraping-status HTTP/1.1" 200 -
-2025-08-28 23:53:20,317 - INFO - 127.0.0.1 - - [28/Aug/2025 23:53:20] "GET /api/scraping-status HTTP/1.1" 200 -
-2025-08-28 23:53:30,001 - INFO - 127.0.0.1 - - [28/Aug/2025 23:53:30] "GET /api/scraping-status HTTP/1.1" 200 -
-2025-08-28 23:53:40,306 - INFO - 127.0.0.1 - - [28/Aug/2025 23:53:40] "GET /api/scraping-status HTTP/1.1" 200 -
-2025-08-28 23:53:50,006 - INFO - 127.0.0.1 - - [28/Aug/2025 23:53:50] "GET /api/scraping-status HTTP/1.1" 200 -
-2025-08-28 23:54:17,604 - INFO - 127.0.0.1 - - [28/Aug/2025 23:54:17] "GET /api/scraping-status HTTP/1.1" 200 -
-2025-08-28 23:54:19,624 - INFO - 127.0.0.1 - - [28/Aug/2025 23:54:19] "GET /api/scraping-status HTTP/1.1" 200 -
-2025-08-28 23:54:30,308 - INFO - 127.0.0.1 - - [28/Aug/2025 23:54:30] "GET /api/scraping-status HTTP/1.1" 200 -
-2025-08-28 23:54:40,012 - INFO - 127.0.0.1 - - [28/Aug/2025 23:54:40] "GET /api/scraping-status HTTP/1.1" 200 -
-2025-08-28 23:54:50,314 - INFO - 127.0.0.1 - - [28/Aug/2025 23:54:50] "GET /api/scraping-status HTTP/1.1" 200 -
-2025-08-28 23:55:00,005 - INFO - 127.0.0.1 - - [28/Aug/2025 23:55:00] "GET /api/scraping-status HTTP/1.1" 200 -
-2025-08-28 23:55:10,316 - INFO - 127.0.0.1 - - [28/Aug/2025 23:55:10] "GET /api/scraping-status HTTP/1.1" 200 -
-2025-08-28 23:55:20,010 - INFO - 127.0.0.1 - - [28/Aug/2025 23:55:20] "GET /api/scraping-status HTTP/1.1" 200 -
-2025-08-28 23:55:30,314 - INFO - 127.0.0.1 - - [28/Aug/2025 23:55:30] "GET /api/scraping-status HTTP/1.1" 200 -
-2025-08-28 23:55:40,014 - INFO - 127.0.0.1 - - [28/Aug/2025 23:55:40] "GET /api/scraping-status HTTP/1.1" 200 -
-2025-08-28 23:55:50,315 - INFO - 127.0.0.1 - - [28/Aug/2025 23:55:50] "GET /api/scraping-status HTTP/1.1" 200 -
-2025-08-28 23:56:00,003 - INFO - 127.0.0.1 - - [28/Aug/2025 23:56:00] "GET /api/scraping-status HTTP/1.1" 200 -
-2025-08-28 23:56:10,306 - INFO - 127.0.0.1 - - [28/Aug/2025 23:56:10] "GET /api/scraping-status HTTP/1.1" 200 -
-2025-08-28 23:56:20,009 - INFO - 127.0.0.1 - - [28/Aug/2025 23:56:20] "GET /api/scraping-status HTTP/1.1" 200 -
-2025-08-28 23:56:29,921 - INFO - 127.0.0.1 - - [28/Aug/2025 23:56:29] "GET /api/scraping-status HTTP/1.1" 200 -
-2025-08-28 23:56:40,014 - INFO - 127.0.0.1 - - [28/Aug/2025 23:56:40] "GET /api/scraping-status HTTP/1.1" 200 -
-2025-08-28 23:56:50,315 - INFO - 127.0.0.1 - - [28/Aug/2025 23:56:50] "GET /api/scraping-status HTTP/1.1" 200 -
-2025-08-28 23:56:59,998 - INFO - 127.0.0.1 - - [28/Aug/2025 23:56:59] "GET /api/scraping-status HTTP/1.1" 200 -
-2025-08-28 23:57:10,307 - INFO - 127.0.0.1 - - [28/Aug/2025 23:57:10] "GET /api/scraping-status HTTP/1.1" 200 -
-2025-08-28 23:57:20,012 - INFO - 127.0.0.1 - - [28/Aug/2025 23:57:20] "GET /api/scraping-status HTTP/1.1" 200 -
-2025-08-28 23:57:30,307 - INFO - 127.0.0.1 - - [28/Aug/2025 23:57:30] "GET /api/scraping-status HTTP/1.1" 200 -
-2025-08-28 23:57:40,004 - INFO - 127.0.0.1 - - [28/Aug/2025 23:57:40] "GET /api/scraping-status HTTP/1.1" 200 -
-2025-08-28 23:57:50,315 - INFO - 127.0.0.1 - - [28/Aug/2025 23:57:50] "GET /api/scraping-status HTTP/1.1" 200 -
-2025-08-28 23:58:00,011 - INFO - 127.0.0.1 - - [28/Aug/2025 23:58:00] "GET /api/scraping-status HTTP/1.1" 200 -
-2025-08-28 23:58:10,322 - INFO - 127.0.0.1 - - [28/Aug/2025 23:58:10] "GET /api/scraping-status HTTP/1.1" 200 -
-2025-08-28 23:58:20,014 - INFO - 127.0.0.1 - - [28/Aug/2025 23:58:20] "GET /api/scraping-status HTTP/1.1" 200 -
-2025-08-28 23:59:11,177 - INFO - 127.0.0.1 - - [28/Aug/2025 23:59:11] "GET /api/scraping-status HTTP/1.1" 200 -
-2025-08-28 23:59:13,036 - INFO - 127.0.0.1 - - [28/Aug/2025 23:59:13] "GET / HTTP/1.1" 200 -
-2025-08-29 00:01:10,769 - INFO - 127.0.0.1 - - [29/Aug/2025 00:01:10] "GET /signup HTTP/1.1" 200 -
-2025-08-29 00:01:13,881 - INFO - 127.0.0.1 - - [29/Aug/2025 00:01:13] "GET /setup-whatsapp HTTP/1.1" 200 -
-2025-08-29 00:01:18,783 - INFO - 127.0.0.1 - - [29/Aug/2025 00:01:18] "GET / HTTP/1.1" 200 -
-2025-08-29 00:01:35,062 - INFO - 127.0.0.1 - - [29/Aug/2025 00:01:35] "GET /signup HTTP/1.1" 200 -
-2025-08-29 00:04:58,697 - INFO -  * Detected change in 'A:\\web end scraper\\website-scraper-ai-support\\scraper\\crawler.py', reloading
-2025-08-29 00:04:59,178 - INFO -  * Restarting with stat
-2025-08-29 00:04:59,388 - INFO -  * Detected change in 'A:\\web end scraper\\website-scraper-ai-support\\scraper\\crawler.py', reloading
-2025-08-29 00:04:59,811 - INFO -  * Restarting with stat
-2025-08-29 00:05:01,761 - WARNING -  * Debugger is active!
-2025-08-29 00:05:01,767 - INFO -  * Debugger PIN: 176-284-469
-2025-08-29 00:05:02,253 - WARNING -  * Debugger is active!
-2025-08-29 00:05:02,257 - INFO -  * Debugger PIN: 176-284-469
+2025-08-29 20:30:06,213 - INFO - [33mPress CTRL+C to quit[0m
+2025-08-29 20:30:06,215 - INFO -  * Restarting with stat
+2025-08-29 20:30:08,010 - WARNING -  * Debugger is active!
+2025-08-29 20:30:08,013 - INFO -  * Debugger PIN: 106-401-541
+2025-08-29 20:30:10,448 - INFO - 127.0.0.1 - - [29/Aug/2025 20:30:10] "GET / HTTP/1.1" 200 -
+2025-08-29 20:30:12,929 - INFO - 127.0.0.1 - - [29/Aug/2025 20:30:12] "GET /signup HTTP/1.1" 200 -
+2025-08-29 20:30:30,987 - ERROR - Error creating user: UNIQUE constraint failed: users.email
+2025-08-29 20:30:30,989 - INFO - 127.0.0.1 - - [29/Aug/2025 20:30:30] "POST /signup HTTP/1.1" 200 -
+2025-08-29 20:30:50,885 - INFO - 127.0.0.1 - - [29/Aug/2025 20:30:50] "POST /signup HTTP/1.1" 200 -
+2025-08-29 20:30:53,127 - INFO - 127.0.0.1 - - [29/Aug/2025 20:30:53] "GET /login HTTP/1.1" 200 -
+2025-08-29 20:30:59,745 - INFO - 127.0.0.1 - - [29/Aug/2025 20:30:59] "[32mPOST /login HTTP/1.1[0m" 302 -
+2025-08-29 20:31:00,065 - INFO - 127.0.0.1 - - [29/Aug/2025 20:31:00] "GET /dashboard HTTP/1.1" 200 -
+2025-08-29 20:31:00,555 - INFO - 127.0.0.1 - - [29/Aug/2025 20:31:00] "GET /api/scraping-status HTTP/1.1" 200 -
+2025-08-29 20:31:07,342 - INFO - 127.0.0.1 - - [29/Aug/2025 20:31:07] "GET /products HTTP/1.1" 200 -
+2025-08-29 20:31:08,310 - INFO - Starting product scraping for user 1: https://kreo-tech.com
+2025-08-29 20:31:08,311 - INFO - Starting product scraping for user 1: https://kreo-tech.com
+2025-08-29 20:31:08,312 - INFO - Cleared existing data for user 1
+2025-08-29 20:31:08,313 - INFO - Starting product scraping for https://kreo-tech.com
+2025-08-29 20:31:14,286 - INFO - Found 32 products so far from https://kreo-tech.com
+2025-08-29 20:31:14,287 - INFO - Found 32 product URLs
+2025-08-29 20:31:14,287 - INFO - Scraping product 1/32: https://kreo-tech.com/products/swarm-sasuke-edition
+2025-08-29 20:31:15,809 - INFO - Scraping product 2/32: https://kreo-tech.com/products/gorec-professional-wireless-mic
+2025-08-29 20:31:17,344 - INFO - Scraping product 3/32: https://kreo-tech.com/products/hawk-naruto-black-orange
+2025-08-29 20:31:18,877 - INFO - Scraping product 4/32: https://kreo-tech.com/products/hive-rgb-gaming-keyboard
+2025-08-29 20:31:20,587 - INFO - Scraping product 5/32: https://kreo-tech.com/products/sonic-gaming-mic
+2025-08-29 20:31:22,231 - INFO - Scraping product 6/32: https://kreo-tech.com/products/cirrus-gaming-chair
+2025-08-29 20:31:23,786 - INFO - Scraping product 7/32: https://kreo-tech.com/products/pegasus-58g-ultra-light-wireless-white-gaming-mouse
+2025-08-29 20:31:25,415 - INFO - Scraping product 8/32: https://kreo-tech.com/products/ikarus-white-wireless-gaming-mouse
+2025-08-29 20:31:27,128 - INFO - Scraping product 9/32: https://kreo-tech.com/products/owl-4k-webcam
+2025-08-29 20:31:28,667 - INFO - Scraping product 10/32: https://kreo-tech.com/collections/gaming-chairs
+2025-08-29 20:31:30,160 - INFO - Scraping product 11/32: https://kreo-tech.com/products/swarm-all-white-wireless-gaming-keyboard
+2025-08-29 20:31:31,889 - INFO - Scraping product 12/32: https://kreo-tech.com/products/ikarus-black-wireless-gaming-mouse
+2025-08-29 20:31:33,680 - INFO - Scraping product 13/32: https://kreo-tech.com/collections/all
+2025-08-29 20:31:35,832 - INFO - Scraping product 14/32: https://kreo-tech.com/collections/gaming-keyboards
+2025-08-29 20:31:38,083 - INFO - Scraping product 15/32: https://kreo-tech.com/products/propel-gaming-mousepad
+2025-08-29 20:31:38,363 - ERROR - Error extracting product info from https://kreo-tech.com/products/propel-gaming-mousepad: 404 Client Error: Not Found for url: https://kreo-tech.com/products/propel-gaming-mousepad
+2025-08-29 20:31:39,365 - INFO - Scraping product 16/32: https://kreo-tech.com/products/hawk-gaming-mouse
+2025-08-29 20:31:41,047 - INFO - Scraping product 17/32: https://kreo-tech.com/products/frost-mobile-cooler
+2025-08-29 20:31:42,567 - INFO - Scraping product 18/32: https://kreo-tech.com/products/mirage-wireless-rgb-gaming-controller-gamepad
+2025-08-29 20:31:44,320 - INFO - Scraping product 19/32: https://kreo-tech.com/collections/ringlights
+2025-08-29 20:31:45,919 - INFO - Scraping product 20/32: https://kreo-tech.com/collections/gaming-mouse-and-mousepad
+2025-08-29 20:31:47,646 - INFO - Scraping product 21/32: https://kreo-tech.com/collections/vendors?q=Kreo
+2025-08-29 20:31:49,920 - INFO - Scraping product 22/32: https://kreo-tech.com/products/kreo-owl-ultra-hd-streaming-webcam
+2025-08-29 20:31:51,455 - INFO - Scraping product 23/32: https://kreo-tech.com/products/nine16-axis-160-tripod-stand-with-phone-holder
+2025-08-29 20:31:52,972 - INFO - Scraping product 24/32: https://kreo-tech.com/products/harpy-light-weight-rgb-gaming-mouse
+2025-08-29 20:31:54,571 - INFO - Scraping product 25/32: https://kreo-tech.com/products/hive-full-size-white-purple-wired-gaming-keyboard
+2025-08-29 20:31:56,501 - INFO - Scraping product 26/32: https://kreo-tech.com/collections/kreo-x-naruto
+2025-08-29 20:31:58,065 - INFO - Scraping product 27/32: https://kreo-tech.com/products/beluga-gaming-headphone
+2025-08-29 20:31:59,579 - INFO - Scraping product 28/32: https://kreo-tech.com/collections/shop-all
+2025-08-29 20:32:01,789 - INFO - Scraping product 29/32: https://kreo-tech.com/collections/audio-video-and-lights
+2025-08-29 20:32:03,924 - INFO - Scraping product 30/32: https://kreo-tech.com/products/hive65-mechanical-gaming-keyboard-with-kreo-purple-switches
+2025-08-29 20:32:05,763 - INFO - Scraping product 31/32: https://kreo-tech.com/products/noctus-gaming-chair
+2025-08-29 20:32:07,263 - INFO - Scraping product 32/32: https://kreo-tech.com/products/kreo-tundra-laptop-cooler
+2025-08-29 20:32:08,842 - INFO - Successfully scraped 31 products
+2025-08-29 20:32:08,842 - INFO - Scraped 31 products for user 1
+2025-08-29 20:32:08,848 - INFO - Added product: Swarm Sasuke Edition
+2025-08-29 20:32:08,854 - INFO - Added product: GoRec Professional Wireless Mic
+2025-08-29 20:32:08,861 - INFO - Added product: Hawk Naruto Black Orange
+2025-08-29 20:32:08,867 - INFO - Added product: Hive75 Black - Purple Wired Gaming Keyboard
+2025-08-29 20:32:08,872 - INFO - Added product: Sonik Gaming Mic
+2025-08-29 20:32:08,877 - INFO - Added product: Cirrus Gaming Chair
+2025-08-29 20:32:08,884 - INFO - Added product: Pegasus 58g Ultra-Light Wireless White Gaming Mouse
+2025-08-29 20:32:08,890 - INFO - Added product: Ikarus White 55g Wireless Gaming Mouse
+2025-08-29 20:32:08,897 - INFO - Added product: Owl 4K Webcam
+2025-08-29 20:32:08,904 - INFO - Added product: Gaming Chairs
+2025-08-29 20:32:08,909 - INFO - Added product: Swarm All White Wireless Gaming Keyboard
+2025-08-29 20:32:08,917 - INFO - Added product: Ikarus Black 55g Wireless Gaming Mouse
+2025-08-29 20:32:08,922 - INFO - Added product: Products
+2025-08-29 20:32:08,928 - INFO - Added product: Gaming Keyboards
+2025-08-29 20:32:08,932 - INFO - Added product: Hawk Gaming Mouse - Black
+2025-08-29 20:32:08,938 - INFO - Added product: Frost Mobile Cooler
+2025-08-29 20:32:08,943 - INFO - Added product: Mirage Wireless RGB Gaming Controller Gamepad
+2025-08-29 20:32:08,949 - INFO - Added product: Lighting
+2025-08-29 20:32:08,956 - INFO - Added product: Gaming Mouse and Mousepads
+2025-08-29 20:32:08,961 - INFO - Added product: Kreo
+2025-08-29 20:32:08,968 - INFO - Added product: Owl Full HD Streaming Webcam
+2025-08-29 20:32:08,972 - INFO - Added product: Nine16 Axis 160 Tripod Stand with Phone Holder
+2025-08-29 20:32:08,978 - INFO - Added product: Harpy Light Weight RGB Gaming Mouse
+2025-08-29 20:32:08,985 - INFO - Added product: Hive98 Full-Size White - Purple Wired Gaming Keyboard
+2025-08-29 20:32:08,990 - INFO - Added product: Kreo X Naruto
+2025-08-29 20:32:08,997 - INFO - Added product: Beluga V2 Gaming Headphones
+2025-08-29 20:32:09,001 - INFO - Added product: Shop All
+2025-08-29 20:32:09,007 - INFO - Added product: Audio Video and Lights
+2025-08-29 20:32:09,013 - INFO - Added product: Hive65 Mechanical Gaming Keyboard with Kreo Purple Linear Switches
+2025-08-29 20:32:09,020 - INFO - Added product: Noctus Gaming Chair
+2025-08-29 20:32:09,025 - INFO - Added product: Tundra Laptop Cooler
+2025-08-29 20:32:09,026 - ERROR - Error generating Q&A for Swarm Sasuke Edition: 'SmartQAGenerator' object has no attribute 'generate_qa_pairs'
+2025-08-29 20:32:09,027 - ERROR - Error generating Q&A for GoRec Professional Wireless Mic: 'SmartQAGenerator' object has no attribute 'generate_qa_pairs'
+2025-08-29 20:32:09,028 - ERROR - Error generating Q&A for Hawk Naruto Black Orange: 'SmartQAGenerator' object has no attribute 'generate_qa_pairs'
+2025-08-29 20:32:09,028 - ERROR - Error generating Q&A for Hive75 Black - Purple Wired Gaming Keyboard: 'SmartQAGenerator' object has no attribute 'generate_qa_pairs'
+2025-08-29 20:32:09,029 - ERROR - Error generating Q&A for Sonik Gaming Mic: 'SmartQAGenerator' object has no attribute 'generate_qa_pairs'
+2025-08-29 20:32:09,029 - ERROR - Error generating Q&A for Cirrus Gaming Chair: 'SmartQAGenerator' object has no attribute 'generate_qa_pairs'
+2025-08-29 20:32:09,030 - ERROR - Error generating Q&A for Pegasus 58g Ultra-Light Wireless White Gaming Mouse: 'SmartQAGenerator' object has no attribute 'generate_qa_pairs'
+2025-08-29 20:32:09,030 - ERROR - Error generating Q&A for Ikarus White 55g Wireless Gaming Mouse: 'SmartQAGenerator' object has no attribute 'generate_qa_pairs'
+2025-08-29 20:32:09,031 - ERROR - Error generating Q&A for Owl 4K Webcam: 'SmartQAGenerator' object has no attribute 'generate_qa_pairs'
+2025-08-29 20:32:09,031 - ERROR - Error generating Q&A for Gaming Chairs: 'SmartQAGenerator' object has no attribute 'generate_qa_pairs'
+2025-08-29 20:32:09,032 - ERROR - Error generating Q&A for Swarm All White Wireless Gaming Keyboard: 'SmartQAGenerator' object has no attribute 'generate_qa_pairs'
+2025-08-29 20:32:09,032 - ERROR - Error generating Q&A for Ikarus Black 55g Wireless Gaming Mouse: 'SmartQAGenerator' object has no attribute 'generate_qa_pairs'
+2025-08-29 20:32:09,033 - ERROR - Error generating Q&A for Products: 'SmartQAGenerator' object has no attribute 'generate_qa_pairs'
+2025-08-29 20:32:09,033 - ERROR - Error generating Q&A for Gaming Keyboards: 'SmartQAGenerator' object has no attribute 'generate_qa_pairs'
+2025-08-29 20:32:09,033 - ERROR - Error generating Q&A for Hawk Gaming Mouse - Black: 'SmartQAGenerator' object has no attribute 'generate_qa_pairs'
+2025-08-29 20:32:09,034 - ERROR - Error generating Q&A for Frost Mobile Cooler: 'SmartQAGenerator' object has no attribute 'generate_qa_pairs'
+2025-08-29 20:32:09,034 - ERROR - Error generating Q&A for Mirage Wireless RGB Gaming Controller Gamepad: 'SmartQAGenerator' object has no attribute 'generate_qa_pairs'
+2025-08-29 20:32:09,034 - ERROR - Error generating Q&A for Lighting: 'SmartQAGenerator' object has no attribute 'generate_qa_pairs'
+2025-08-29 20:32:09,034 - ERROR - Error generating Q&A for Gaming Mouse and Mousepads: 'SmartQAGenerator' object has no attribute 'generate_qa_pairs'
+2025-08-29 20:32:09,034 - ERROR - Error generating Q&A for Kreo: 'SmartQAGenerator' object has no attribute 'generate_qa_pairs'
+2025-08-29 20:32:09,034 - ERROR - Error generating Q&A for Owl Full HD Streaming Webcam: 'SmartQAGenerator' object has no attribute 'generate_qa_pairs'
+2025-08-29 20:32:09,035 - ERROR - Error generating Q&A for Nine16 Axis 160 Tripod Stand with Phone Holder: 'SmartQAGenerator' object has no attribute 'generate_qa_pairs'
+2025-08-29 20:32:09,035 - ERROR - Error generating Q&A for Harpy Light Weight RGB Gaming Mouse: 'SmartQAGenerator' object has no attribute 'generate_qa_pairs'
+2025-08-29 20:32:09,035 - ERROR - Error generating Q&A for Hive98 Full-Size White - Purple Wired Gaming Keyboard: 'SmartQAGenerator' object has no attribute 'generate_qa_pairs'
+2025-08-29 20:32:09,035 - ERROR - Error generating Q&A for Kreo X Naruto: 'SmartQAGenerator' object has no attribute 'generate_qa_pairs'
+2025-08-29 20:32:09,035 - ERROR - Error generating Q&A for Beluga V2 Gaming Headphones: 'SmartQAGenerator' object has no attribute 'generate_qa_pairs'
+2025-08-29 20:32:09,035 - ERROR - Error generating Q&A for Shop All: 'SmartQAGenerator' object has no attribute 'generate_qa_pairs'
+2025-08-29 20:32:09,036 - ERROR - Error generating Q&A for Audio Video and Lights: 'SmartQAGenerator' object has no attribute 'generate_qa_pairs'
+2025-08-29 20:32:09,036 - ERROR - Error generating Q&A for Hive65 Mechanical Gaming Keyboard with Kreo Purple Linear Switches: 'SmartQAGenerator' object has no attribute 'generate_qa_pairs'
+2025-08-29 20:32:09,037 - ERROR - Error generating Q&A for Noctus Gaming Chair: 'SmartQAGenerator' object has no attribute 'generate_qa_pairs'
+2025-08-29 20:32:09,037 - ERROR - Error generating Q&A for Tundra Laptop Cooler: 'SmartQAGenerator' object has no attribute 'generate_qa_pairs'
+2025-08-29 20:32:09,040 - INFO - Created Q&A file: scraped_data/user_1_kreo-tech-com/qa_pairs/qa_pairs.json
+2025-08-29 20:32:09,041 - INFO - Scraping completed for user 1: {'success': True, 'products_count': 31, 'qa_pairs_count': 0, 'qa_file_path': 'scraped_data/user_1_kreo-tech-com/qa_pairs/qa_pairs.json'}
+2025-08-29 20:32:09,539 - INFO - Loaded 0 Q&A pairs
+2025-08-29 20:32:09,539 - INFO - Chatbot initialized with 0 Q&A pairs
+2025-08-29 20:32:09,539 - INFO - Created chatbot for user 1
+2025-08-29 20:32:09,539 - INFO - Scraping completed successfully for user 1
+2025-08-29 20:32:09,540 - INFO - 127.0.0.1 - - [29/Aug/2025 20:32:09] "POST /api/scrape-products HTTP/1.1" 200 -
+2025-08-29 20:32:39,437 - INFO - 127.0.0.1 - - [29/Aug/2025 20:32:39] "GET /products HTTP/1.1" 200 -
+2025-08-29 20:33:55,600 - INFO - 127.0.0.1 - - [29/Aug/2025 20:33:55] "[35m[1mGET /api/products/31 HTTP/1.1[0m" 500 -
+2025-08-29 20:33:59,872 - INFO - 127.0.0.1 - - [29/Aug/2025 20:33:59] "[35m[1mGET /api/products/31 HTTP/1.1[0m" 500 -
+2025-08-29 20:35:03,013 - INFO - 127.0.0.1 - - [29/Aug/2025 20:35:03] "[35m[1mGET /api/products/28 HTTP/1.1[0m" 500 -
+2025-08-29 20:35:13,868 - INFO - 127.0.0.1 - - [29/Aug/2025 20:35:13] "[35m[1mGET /api/products/28 HTTP/1.1[0m" 500 -
+2025-08-29 20:35:22,333 - INFO - 127.0.0.1 - - [29/Aug/2025 20:35:22] "[31m[1mDELETE /api/products/28 HTTP/1.1[0m" 405 -
+2025-08-29 20:35:37,784 - INFO - 127.0.0.1 - - [29/Aug/2025 20:35:37] "GET /dashboard HTTP/1.1" 200 -
+2025-08-29 20:35:38,085 - INFO - 127.0.0.1 - - [29/Aug/2025 20:35:38] "GET /api/scraping-status HTTP/1.1" 200 -
+2025-08-29 20:35:40,798 - INFO - 127.0.0.1 - - [29/Aug/2025 20:35:40] "GET /products HTTP/1.1" 200 -
+2025-08-29 20:36:17,218 - INFO - 127.0.0.1 - - [29/Aug/2025 20:36:17] "GET /products HTTP/1.1" 200 -
+2025-08-29 20:36:18,180 - INFO - 127.0.0.1 - - [29/Aug/2025 20:36:18] "[35m[1mGET /analytics HTTP/1.1[0m" 500 -
+2025-08-29 20:36:18,491 - INFO - 127.0.0.1 - - [29/Aug/2025 20:36:18] "GET /analytics?__debugger__=yes&cmd=resource&f=style.css HTTP/1.1" 200 -
+2025-08-29 20:36:18,548 - INFO - 127.0.0.1 - - [29/Aug/2025 20:36:18] "GET /analytics?__debugger__=yes&cmd=resource&f=debugger.js HTTP/1.1" 200 -
+2025-08-29 20:36:18,907 - INFO - 127.0.0.1 - - [29/Aug/2025 20:36:18] "GET /analytics?__debugger__=yes&cmd=resource&f=console.png HTTP/1.1" 200 -
+2025-08-29 20:36:19,157 - INFO - 127.0.0.1 - - [29/Aug/2025 20:36:19] "[36mGET /analytics?__debugger__=yes&cmd=resource&f=console.png HTTP/1.1[0m" 304 -
+2025-08-29 20:36:28,149 - INFO - 127.0.0.1 - - [29/Aug/2025 20:36:28] "[35m[1mGET /analytics HTTP/1.1[0m" 500 -
+2025-08-29 20:36:28,271 - INFO - 127.0.0.1 - - [29/Aug/2025 20:36:28] "[36mGET /analytics?__debugger__=yes&cmd=resource&f=style.css HTTP/1.1[0m" 304 -
+2025-08-29 20:36:28,643 - INFO - 127.0.0.1 - - [29/Aug/2025 20:36:28] "[36mGET /analytics?__debugger__=yes&cmd=resource&f=debugger.js HTTP/1.1[0m" 304 -
+2025-08-29 20:36:28,910 - INFO - 127.0.0.1 - - [29/Aug/2025 20:36:28] "[36mGET /analytics?__debugger__=yes&cmd=resource&f=console.png HTTP/1.1[0m" 304 -
+2025-08-29 20:37:02,894 - INFO - 127.0.0.1 - - [29/Aug/2025 20:37:02] "GET /dashboard HTTP/1.1" 200 -
+2025-08-29 20:37:03,203 - INFO - 127.0.0.1 - - [29/Aug/2025 20:37:03] "GET /api/scraping-status HTTP/1.1" 200 -
+2025-08-29 20:37:13,248 - INFO - 127.0.0.1 - - [29/Aug/2025 20:37:13] "GET /api/scraping-status HTTP/1.1" 200 -
+2025-08-29 20:37:14,996 - INFO - Query analysis: QueryAnalysis(is_product_related=False, confidence=0.0, category='general', intent='general_inquiry', suggested_response="I'm here to help you with product-related questions. Please ask me about our products, their features, pricing, or availability.")
+2025-08-29 20:37:15,001 - INFO - 127.0.0.1 - - [29/Aug/2025 20:37:15] "POST /api/test-message HTTP/1.1" 200 -
+2025-08-29 20:37:23,324 - INFO - 127.0.0.1 - - [29/Aug/2025 20:37:23] "GET /api/scraping-status HTTP/1.1" 200 -
+2025-08-29 20:37:33,013 - INFO - 127.0.0.1 - - [29/Aug/2025 20:37:33] "GET /api/scraping-status HTTP/1.1" 200 -
+2025-08-29 20:37:43,325 - INFO - 127.0.0.1 - - [29/Aug/2025 20:37:43] "GET /api/scraping-status HTTP/1.1" 200 -
+2025-08-29 20:37:45,599 - INFO - 127.0.0.1 - - [29/Aug/2025 20:37:45] "GET /dashboard HTTP/1.1" 200 -
+2025-08-29 20:37:45,896 - INFO - 127.0.0.1 - - [29/Aug/2025 20:37:45] "GET /api/scraping-status HTTP/1.1" 200 -
+2025-08-29 20:37:47,193 - INFO - 127.0.0.1 - - [29/Aug/2025 20:37:47] "GET /products HTTP/1.1" 200 -
+2025-08-29 20:37:52,935 - INFO - 127.0.0.1 - - [29/Aug/2025 20:37:52] "[35m[1mGET /api/products/12 HTTP/1.1[0m" 500 -
+2025-08-29 20:37:55,717 - INFO - 127.0.0.1 - - [29/Aug/2025 20:37:55] "[35m[1mGET /api/products/12 HTTP/1.1[0m" 500 -
+2025-08-29 20:38:28,626 - INFO -  * Detected change in 'A:\\web end scraper\\website-scraper-ai-support\\app.py', reloading
+2025-08-29 20:38:29,579 - INFO -  * Restarting with stat
+2025-08-29 20:38:32,533 - WARNING -  * Debugger is active!
+2025-08-29 20:38:32,537 - INFO -  * Debugger PIN: 106-401-541
+2025-08-29 21:09:16,562 - WARNING - No Q&A file provided or file doesn't exist
+2025-08-29 21:09:16,562 - INFO - Chatbot initialized with 0 Q&A pairs
+2025-08-29 21:55:08,947 - WARNING - No Q&A file provided or file doesn't exist
+2025-08-29 21:55:08,948 - INFO - Chatbot initialized with 0 Q&A pairs
