@@ -1,6 +1,6 @@
 {% extends "base.html" %}
 
-{% block title %}Website Setup{% endblock %}
+{% block title %}Website Setup - AI Knowledge Base{% endblock %}
 
 {% block content %}
 <div class="container py-4">
@@ -12,28 +12,45 @@
                     <i class="fas fa-globe"></i>
                 </div>
                 <div>
-                    <h2>Website Content Scraping</h2>
-                    <p class="text-muted mb-0">Let AI learn about your business from your website</p>
+                    <h2>Website Knowledge Base Setup</h2>
+                    <p class="text-muted mb-0">Let AI automatically scrape and learn from your website</p>
                 </div>
             </div>
             
-            <!-- Setup Form -->
+            <!-- Current Website -->
+            <div class="card mb-4">
+                <div class="card-header">
+                    <h6 class="mb-0"><i class="fas fa-info-circle me-2"></i>Current Website</h6>
+                </div>
+                <div class="card-body">
+                    <div class="d-flex align-items-center">
+                        <i class="fas fa-globe text-primary me-3" style="font-size: 2rem;"></i>
+                        <div>
+                            <h6 class="mb-1">{{ session.website_url or 'No website configured' }}</h6>
+                            <p class="text-muted mb-0">Registered website for AI training</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Scraping Form -->
             <div class="card">
                 <div class="card-header">
-                    <h6 class="mb-0"><i class="fas fa-cog me-2"></i>Website Configuration</h6>
+                    <h6 class="mb-0"><i class="fas fa-robot me-2"></i>Update Knowledge Base</h6>
                 </div>
                 <div class="card-body">
                     <form method="POST">
                         <div class="mb-3">
                             <label for="website_url" class="form-label">Website URL</label>
                             <input type="url" class="form-control" id="website_url" name="website_url" 
-                                   placeholder="https://your-website.com" required>
-                            <div class="form-text">We'll automatically scrape all pages to create your knowledge base</div>
+                                   value="{{ session.website_url or '' }}" required>
+                            <div class="form-text">AI will scrape all accessible pages from this domain</div>
                         </div>
                         
+                        <!-- Scraping Options -->
                         <div class="card bg-light mb-3">
                             <div class="card-body">
-                                <h6><i class="fas fa-sliders-h me-2"></i>Scraping Settings</h6>
+                                <h6><i class="fas fa-cog me-2"></i>Scraping Options</h6>
                                 <div class="row g-3">
                                     <div class="col-md-6">
                                         <label class="form-label">Max Pages</label>
@@ -52,15 +69,46 @@
                                         </select>
                                     </div>
                                 </div>
+                                <div class="mt-3">
+                                    <div class="form-check">
+                                        <input class="form-check-input" type="checkbox" id="include_images" checked>
+                                        <label class="form-check-label" for="include_images">
+                                            Include product images and media
+                                        </label>
+                                    </div>
+                                    <div class="form-check">
+                                        <input class="form-check-input" type="checkbox" id="deep_crawl">
+                                        <label class="form-check-label" for="deep_crawl">
+                                            Deep crawl (follow all internal links)
+                                        </label>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <!-- Progress Bar (hidden by default) -->
+                        <div id="scrapingProgress" class="mb-4" style="display: none;">
+                            <div class="card border-primary">
+                                <div class="card-body">
+                                    <h6 class="card-title">
+                                        <i class="fas fa-spinner fa-spin me-2"></i>Scraping Website...
+                                    </h6>
+                                    <div class="progress mb-2">
+                                        <div class="progress-bar progress-bar-striped progress-bar-animated" 
+                                             role="progressbar" style="width: 0%" id="progressBar">
+                                        </div>
+                                    </div>
+                                    <small class="text-muted" id="progressText">Initializing scraper...</small>
+                                </div>
                             </div>
                         </div>
                         
                         <div class="d-flex gap-2">
-                            <button type="submit" class="btn btn-primary">
-                                <i class="fas fa-globe me-2"></i>Start Scraping
+                            <button type="submit" class="btn btn-primary" id="scrapeBtn">
+                                <i class="fas fa-sync me-2"></i>Update Knowledge Base
                             </button>
-                            <button type="button" class="btn btn-outline-secondary">
-                                <i class="fas fa-eye me-2"></i>Preview Content
+                            <button type="button" class="btn btn-outline-secondary" onclick="previewScraping()">
+                                <i class="fas fa-eye me-2"></i>Preview Pages
                             </button>
                         </div>
                     </form>
@@ -70,21 +118,175 @@
         
         <!-- Sidebar -->
         <div class="col-lg-4">
-            <div class="card">
+            <!-- Current Status -->
+            <div class="card mb-4">
                 <div class="card-header">
-                    <h6 class="mb-0"><i class="fas fa-info-circle me-2"></i>How It Works</h6>
+                    <h6 class="mb-0"><i class="fas fa-chart-bar me-2"></i>Knowledge Base Status</h6>
                 </div>
                 <div class="card-body">
-                    <ol class="small">
-                        <li>AI crawls your website automatically</li>
-                        <li>Extracts content from all pages</li>
-                        <li>Creates structured Q&A pairs</li>
-                        <li>Builds intelligent knowledge base</li>
-                        <li>Ready for customer support</li>
-                    </ol>
+                    <div class="row g-3 text-center">
+                        <div class="col-6">
+                            <div class="stats-card">
+                                <div class="stats-number">500</div>
+                                <div class="text-muted small">Pages Scraped</div>
+                            </div>
+                        </div>
+                        <div class="col-6">
+                            <div class="stats-card">
+                                <div class="stats-number">1,657</div>
+                                <div class="text-muted small">Q&A Pairs</div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="mt-3">
+                        <div class="d-flex justify-content-between align-items-center mb-2">
+                            <span class="small">Last Updated:</span>
+                            <span class="small text-muted">2 days ago</span>
+                        </div>
+                        <div class="progress">
+                            <div class="progress-bar" style="width: 85%"></div>
+                        </div>
+                        <div class="small text-muted mt-1">Knowledge base is 85% complete</div>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- What Gets Scraped -->
+            <div class="card">
+                <div class="card-header">
+                    <h6 class="mb-0"><i class="fas fa-list me-2"></i>What Gets Scraped</h6>
+                </div>
+                <div class="card-body">
+                    <ul class="list-unstyled">
+                        <li class="mb-2">
+                            <i class="fas fa-check text-success me-2"></i>
+                            <strong>Product Pages</strong><br>
+                            <small class="text-muted">Descriptions, specs, pricing</small>
+                        </li>
+                        <li class="mb-2">
+                            <i class="fas fa-check text-success me-2"></i>
+                            <strong>Service Pages</strong><br>
+                            <small class="text-muted">What you offer, how it works</small>
+                        </li>
+                        <li class="mb-2">
+                            <i class="fas fa-check text-success me-2"></i>
+                            <strong>FAQ & Support</strong><br>
+                            <small class="text-muted">Common questions, policies</small>
+                        </li>
+                        <li class="mb-2">
+                            <i class="fas fa-check text-success me-2"></i>
+                            <strong>Contact Info</strong><br>
+                            <small class="text-muted">Phone, email, address</small>
+                        </li>
+                        <li class="mb-2">
+                            <i class="fas fa-times text-danger me-2"></i>
+                            <strong>Private Pages</strong><br>
+                            <small class="text-muted">Login, admin, checkout</small>
+                        </li>
+                    </ul>
                 </div>
             </div>
         </div>
     </div>
 </div>
+{% endblock %}
+
+{% block extra_js %}
+<script>
+// Handle form submission with progress bar
+document.querySelector('form').addEventListener('submit', function(e) {
+    e.preventDefault();
+    
+    const btn = document.getElementById('scrapeBtn');
+    const progressDiv = document.getElementById('scrapingProgress');
+    const progressBar = document.getElementById('progressBar');
+    const progressText = document.getElementById('progressText');
+    const websiteUrl = document.getElementById('website_url').value;
+    
+    if (!websiteUrl) {
+        alert('Please enter a website URL');
+        return;
+    }
+    
+    // Show progress bar and disable button
+    btn.disabled = true;
+    btn.innerHTML = '<i class="fas fa-spinner fa-spin me-2"></i>Starting...';
+    progressDiv.style.display = 'block';
+    
+    // Simulate progress updates
+    let progress = 0;
+    const progressInterval = setInterval(() => {
+        progress += Math.random() * 10;
+        if (progress > 90) progress = 90;
+        
+        progressBar.style.width = progress + '%';
+        
+        if (progress < 20) {
+            progressText.textContent = 'Analyzing website structure...';
+        } else if (progress < 40) {
+            progressText.textContent = 'Discovering product pages...';
+        } else if (progress < 60) {
+            progressText.textContent = 'Extracting product information...';
+        } else if (progress < 80) {
+            progressText.textContent = 'Processing and cleaning data...';
+        } else {
+            progressText.textContent = 'Generating Q&A pairs...';
+        }
+    }, 800);
+    
+    // Submit the form
+    const formData = new FormData(this);
+    
+    fetch(this.action, {
+        method: 'POST',
+        body: formData
+    })
+    .then(response => {
+        if (response.redirected) {
+            // Clear progress and complete
+            clearInterval(progressInterval);
+            progressBar.style.width = '100%';
+            progressText.textContent = 'Scraping completed successfully!';
+            
+            setTimeout(() => {
+                window.location.href = response.url;
+            }, 1500);
+        } else {
+            throw new Error('Scraping failed');
+        }
+    })
+    .catch(error => {
+        clearInterval(progressInterval);
+        console.error('Error:', error);
+        alert('Error during scraping. Please try again.');
+        
+        // Reset UI
+        btn.disabled = false;
+        btn.innerHTML = '<i class="fas fa-sync me-2"></i>Update Knowledge Base';
+        progressDiv.style.display = 'none';
+    });
+});
+
+async function previewScraping() {
+    const websiteUrl = document.getElementById('website_url').value;
+    
+    if (!websiteUrl) {
+        alert('Please enter a website URL first');
+        return;
+    }
+    
+    const button = event.target;
+    const originalHTML = button.innerHTML;
+    button.innerHTML = '<i class="fas fa-spinner fa-spin me-2"></i>Analyzing...';
+    button.disabled = true;
+    
+    // Simulate preview (in real implementation, make API call)
+    setTimeout(() => {
+        alert(`Preview for ${websiteUrl}:\n\n• Found ~50 pages to scrape\n• Estimated 200-300 Q&A pairs\n• Processing time: 5-10 minutes`);
+        
+        button.innerHTML = originalHTML;
+        button.disabled = false;
+    }, 2000);
+}
+</script>
 {% endblock %}

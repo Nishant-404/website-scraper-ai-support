@@ -1,0 +1,262 @@
+================================================================================
+                    AI CUSTOMER SUPPORT PLATFORM - PROJECT GROUND RULES
+================================================================================
+
+PROJECT OVERVIEW:
+-----------------
+This is an AI-powered customer support platform that scrapes websites to create
+intelligent chatbots for businesses. The system provides multi-channel support
+through WhatsApp, Email, and Web interfaces.
+
+CORE FUNCTIONALITY:
+------------------
+1. Website Scraping: Automatically extracts product information from e-commerce sites
+2. AI Chatbot: Creates intelligent responses using scraped data
+3. Multi-Channel Support: WhatsApp, Email, and Web chat integration
+4. User Management: Multi-tenant system with user authentication
+5. Analytics: Conversation tracking and performance metrics
+6. Product Management: CRUD operations for scraped products
+
+GROUND RULES FOR DEVELOPMENT:
+============================
+
+1. MODULAR ARCHITECTURE:
+   - Every single function must be in its own Python file
+   - Each file should contain only ONE primary function or class
+   - Related functions can be grouped in the same folder
+   - Maximum file size: 200 lines of code
+
+2. DOCUMENTATION REQUIREMENTS:
+   - Every file must have extensive comments (minimum 40% comment-to-code ratio)
+   - Every function must have detailed docstrings
+   - Every variable must have inline comments explaining its purpose
+   - Every complex logic block must have explanatory comments
+   - Comments should be written for both humans and AI assistants
+
+3. FOLDER STRUCTURE:
+   - /functions/ - Core business logic functions
+   - /routes/ - Flask route handlers
+   - /database/ - Database operations and models
+   - /scraper/ - Web scraping functionality
+   - /ai/ - AI and chatbot related code
+   - /integrations/ - Third-party integrations (WhatsApp, Email)
+   - /utils/ - Utility functions and helpers
+   - /templates/ - HTML templates
+   - /static/ - CSS, JS, images
+   - /config/ - Configuration files
+   - /tests/ - Unit tests
+   - /docs/ - Documentation files
+
+4. NAMING CONVENTIONS:
+   - Files: snake_case.py (e.g., user_authentication.py)
+   - Functions: snake_case (e.g., create_user_account)
+   - Classes: PascalCase (e.g., UserManager)
+   - Variables: snake_case (e.g., user_id)
+   - Constants: UPPER_CASE (e.g., MAX_PRODUCTS)
+
+5. CODE QUALITY STANDARDS:
+   - Every function must have error handling
+   - Every function must have input validation
+   - Every function must return consistent data types
+   - Every function must be testable
+   - No function should exceed 50 lines of code
+
+6. SECURITY REQUIREMENTS:
+   - All user inputs must be validated and sanitized
+   - All database queries must use parameterized statements
+   - All sensitive data must be encrypted
+   - All API endpoints must have authentication
+   - All file operations must validate paths
+
+7. PERFORMANCE REQUIREMENTS:
+   - Database queries must be optimized
+   - Large operations must be paginated
+   - Heavy processing must be asynchronous
+   - Caching must be implemented where appropriate
+   - Memory usage must be monitored
+
+8. TESTING REQUIREMENTS:
+   - Every function must have unit tests
+   - Every route must have integration tests
+   - Every feature must have end-to-end tests
+   - Test coverage must be minimum 80%
+   - Tests must be automated
+
+9. DEPLOYMENT REQUIREMENTS:
+   - Environment-specific configuration files
+   - Docker containerization support
+   - Database migration scripts
+   - Backup and recovery procedures
+   - Monitoring and logging setup
+
+10. MAINTENANCE REQUIREMENTS:
+    - Regular dependency updates
+    - Security vulnerability scanning
+    - Performance monitoring
+    - Error tracking and alerting
+    - Documentation updates
+
+TECHNOLOGY STACK:
+================
+- Backend: Python Flask
+- Database: SQLite (development), PostgreSQL (production)
+- AI: Groq API for language processing
+- Scraping: BeautifulSoup, Selenium
+- Integrations: Twilio (WhatsApp), SMTP (Email)
+- Frontend: HTML, CSS, JavaScript, Bootstrap
+- Deployment: Docker, Nginx
+
+PROJECT STRUCTURE EXAMPLE:
+=========================
+website-scraper-ai-support/
+├── functions/
+│   ├── user/
+│   │   ├── create_user.py
+│   │   ├── authenticate_user.py
+│   │   └── update_user.py
+│   ├── product/
+│   │   ├── add_product.py
+│   │   ├── get_products.py
+│   │   └── update_product.py
+│   └── chat/
+│       ├── process_message.py
+│       └── generate_response.py
+├── routes/
+│   ├── auth_routes.py
+│   ├── product_routes.py
+│   └── api_routes.py
+├── database/
+│   ├── models/
+│   ├── operations/
+│   └── migrations/
+├── scraper/
+│   ├── website_crawler.py
+│   ├── product_extractor.py
+│   └── data_cleaner.py
+├── ai/
+│   ├── chatbot_engine.py
+│   ├── response_generator.py
+│   └── context_manager.py
+├── integrations/
+│   ├── whatsapp/
+│   ├── email/
+│   └── webhook/
+├── utils/
+│   ├── validators.py
+│   ├── helpers.py
+│   └── constants.py
+├── config/
+│   ├── development.py
+│   ├── production.py
+│   └── testing.py
+├── tests/
+│   ├── unit/
+│   ├── integration/
+│   └── e2e/
+└── docs/
+    ├── api_documentation.md
+    ├── deployment_guide.md
+    └── user_manual.md
+
+DEVELOPMENT WORKFLOW:
+====================
+1. Create feature branch from main
+2. Write function with extensive comments
+3. Create unit tests for the function
+4. Update documentation
+5. Submit pull request with detailed description
+6. Code review focusing on comments and structure
+7. Merge after approval and testing
+
+COMMENT STANDARDS:
+=================
+Every file must start with:
+```python
+#!/usr/bin/env python3
+"""
+File: filename.py
+Purpose: Brief description of what this file does
+Author: Developer Name
+Created: Date
+Last Modified: Date
+
+This file contains [detailed description of functionality].
+It is part of the AI Customer Support Platform.
+
+Dependencies:
+- List all imports and their purposes
+- Explain any external dependencies
+
+Usage:
+- How to use this file/function
+- Example usage if applicable
+
+Notes:
+- Any important implementation details
+- Known limitations or issues
+- Future improvement plans
+"""
+```
+
+Every function must have:
+```python
+def function_name(parameter1: type, parameter2: type) -> return_type:
+    """
+    Brief description of what this function does.
+    
+    This function performs [detailed explanation of functionality].
+    It is designed to [explain the purpose and use case].
+    
+    Args:
+        parameter1 (type): Description of parameter1 and its purpose
+        parameter2 (type): Description of parameter2 and its constraints
+    
+    Returns:
+        return_type: Description of what is returned and its format
+    
+    Raises:
+        ExceptionType: When this exception is raised and why
+        AnotherException: Another exception condition
+    
+    Example:
+        >>> result = function_name("example", 123)
+        >>> print(result)
+        Expected output
+    
+    Notes:
+        - Any important implementation details
+        - Performance considerations
+        - Security considerations
+    """
+    # Detailed implementation with inline comments
+    pass
+```
+
+QUALITY CHECKLIST:
+=================
+Before committing any code, ensure:
+□ File has proper header comment
+□ All functions have detailed docstrings
+□ Inline comments explain complex logic
+□ Error handling is implemented
+□ Input validation is present
+□ Function is in correct folder
+□ File name follows naming convention
+□ Code is under 200 lines
+□ Unit tests are written
+□ Documentation is updated
+
+MAINTENANCE SCHEDULE:
+====================
+- Daily: Monitor error logs and performance
+- Weekly: Review and update documentation
+- Monthly: Update dependencies and security scan
+- Quarterly: Performance optimization review
+- Annually: Architecture review and refactoring
+
+This document serves as the foundation for all development work on the
+AI Customer Support Platform. All team members must follow these guidelines
+to ensure code quality, maintainability, and scalability.
+
+Last Updated: [Current Date]
+Version: 1.0

@@ -139,18 +139,8 @@ class Database:
             )
         ''')
         
-        # Conversations table
-        cursor.execute('''
-            CREATE TABLE IF NOT EXISTS conversations (
-                id INTEGER PRIMARY KEY AUTOINCREMENT,
-                user_id INTEGER NOT NULL,
-                session_id TEXT NOT NULL,
-                started_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
-                ended_at TIMESTAMP,
-                total_messages INTEGER DEFAULT 0,
-                FOREIGN KEY (user_id) REFERENCES users (id)
-            )
-        ''')
+        # Conversations table (using existing schema)
+        # Note: Table already exists with different schema, keeping as-is
         
         # Messages table
         cursor.execute('''
@@ -212,15 +202,15 @@ class Database:
     
     def add_product(self, user_id: int, name: str, description: str, price: str,
                    category: str, url: str, image_url: str = "", features: str = "{}",
-                   specifications: str = "{}") -> Optional[int]:
+                   specifications: str = "{}", is_active: bool = True) -> Optional[int]:
         """Add a product"""
         try:
             cursor = self.conn.cursor()
             cursor.execute('''
                 INSERT INTO products (user_id, name, description, price, category, url, 
-                                    image_url, features, specifications)
-                VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?)
-            ''', (user_id, name, description, price, category, url, image_url, features, specifications))
+                                    image_url, features, specifications, is_active)
+                VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?)
+            ''', (user_id, name, description, price, category, url, image_url, features, specifications, int(is_active)))
             self.conn.commit()
             return cursor.lastrowid
         except Exception:
@@ -333,17 +323,18 @@ class Database:
         except Exception:
             return None
     
-    def get_user_conversations(self, user_id: int, limit: int = 10) -> List[Conversation]:
-        """Get user conversations"""
+    def get_user_conversations(self, user_id: int, limit: int = 10) -> List[Dict]:
+        """Get user conversations (simplified for existing schema)"""
         cursor = self.conn.cursor()
         cursor.execute('''
-            SELECT * FROM conversations 
+            SELECT id, user_id, customer_phone, customer_email, message, response, channel, created_at
+            FROM conversations 
             WHERE user_id = ? 
-            ORDER BY started_at DESC 
+            ORDER BY created_at DESC 
             LIMIT ?
         ''', (user_id, limit))
         rows = cursor.fetchall()
-        return [Conversation(**dict(row)) for row in rows]
+        return [dict(row) for row in rows]
     
     def update_user_website(self, user_id: int, website_url: str) -> bool:
         """Update user's website URL"""

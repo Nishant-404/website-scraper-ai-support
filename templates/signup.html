@@ -48,7 +48,7 @@
                             </label>
                         </div>
                         
-                        <button type="submit" class="btn btn-primary w-100 py-2">
+                        <button type="submit" class="btn btn-primary w-100 py-2" id="signupBtn">
                             <i class="fas fa-rocket me-2"></i>Create Account & Start Free Trial
                         </button>
                     </form>
@@ -82,4 +82,70 @@
         </div>
     </div>
 </div>
+
+<script>
+// Add form validation and loading state
+document.querySelector('form').addEventListener('submit', function(e) {
+    const btn = document.getElementById('signupBtn');
+    const originalHTML = btn.innerHTML;
+    
+    // Show loading state
+    btn.disabled = true;
+    btn.innerHTML = '<i class="fas fa-spinner fa-spin me-2"></i>Creating Account...';
+    
+    // Validate form
+    const requiredFields = ['company_name', 'website_url', 'username', 'email', 'password'];
+    let isValid = true;
+    
+    requiredFields.forEach(fieldName => {
+        const field = document.getElementById(fieldName);
+        if (!field.value.trim()) {
+            field.classList.add('is-invalid');
+            isValid = false;
+        } else {
+            field.classList.remove('is-invalid');
+        }
+    });
+    
+    // Validate email format
+    const email = document.getElementById('email');
+    const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+    if (!emailRegex.test(email.value)) {
+        email.classList.add('is-invalid');
+        isValid = false;
+    }
+    
+    // Validate URL format
+    const website = document.getElementById('website_url');
+    try {
+        new URL(website.value);
+        website.classList.remove('is-invalid');
+    } catch {
+        website.classList.add('is-invalid');
+        isValid = false;
+    }
+    
+    if (!isValid) {
+        e.preventDefault();
+        btn.disabled = false;
+        btn.innerHTML = originalHTML;
+        return false;
+    }
+    
+    // If form submission fails, reset button after 5 seconds
+    setTimeout(() => {
+        if (btn.disabled) {
+            btn.disabled = false;
+            btn.innerHTML = originalHTML;
+        }
+    }, 5000);
+});
+
+// Remove validation classes on input
+document.querySelectorAll('input').forEach(input => {
+    input.addEventListener('input', function() {
+        this.classList.remove('is-invalid');
+    });
+});
+</script>
 {% endblock %}
