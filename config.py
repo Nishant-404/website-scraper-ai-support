@@ -15,7 +15,7 @@ class Config:
     
     # Flask Settings
     SECRET_KEY = os.getenv('SECRET_KEY', 'dev-secret-key-change-in-production')
-    DEBUG = os.getenv('FLASK_DEBUG', 'True').lower() == 'true'
+    DEBUG = os.getenv('DEBUG', os.getenv('FLASK_DEBUG', 'True')).lower() == 'true'
     TESTING = os.getenv('TESTING', 'False').lower() == 'true'
     
     # Database
@@ -100,15 +100,28 @@ class Config:
         required_keys = [
             'GROQ_API_KEY',
         ]
-        
+
+        if cls.ENABLE_EMAIL:
+            required_keys.extend([
+                'SMTP_USERNAME',
+                'SMTP_PASSWORD',
+                'FROM_EMAIL',
+            ])
+
+        if cls.ENABLE_WHATSAPP:
+            required_keys.extend([
+                'TWILIO_ACCOUNT_SID',
+                'TWILIO_AUTH_TOKEN',
+            ])
+
         missing_keys = []
         for key in required_keys:
             if not getattr(cls, key):
                 missing_keys.append(key)
-        
+
         if missing_keys:
             raise ValueError(f"Missing required environment variables: {', '.join(missing_keys)}")
-        
+
         return True
     
     @classmethod

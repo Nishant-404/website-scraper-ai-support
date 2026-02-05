@@ -46,11 +46,15 @@ from routes.auth_routes import auth_bp
 from routes.product_routes import product_bp
 
 # Configure logging based on environment
+log_directory = os.path.dirname(Config.LOG_FILE)
+if log_directory:
+    os.makedirs(log_directory, exist_ok=True)
+
 logging.basicConfig(
     level=getattr(logging, Config.LOG_LEVEL),
     format='%(asctime)s - %(name)s - %(levelname)s - %(message)s',
     handlers=[
-        logging.FileHandler('app.log'),
+        logging.FileHandler(Config.LOG_FILE),
         logging.StreamHandler(sys.stdout)
     ]
 )
