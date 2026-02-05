@@ -70,6 +70,11 @@
    pip install -r requirements.txt
    ```
 
+   For AI/ML features (embeddings, transformers), install the extended set:
+   ```bash
+   pip install -r requirements-ai.txt
+   ```
+
 4. **Configure Environment Variables**
    ```bash
    cp .env.example .env
@@ -170,6 +175,7 @@ website-scraper-ai-support/
 | `GROQ_API_KEY` | Groq API key for AI responses | Yes | - |
 | `DEBUG` | Enable debug mode | No | `False` |
 | `LOG_LEVEL` | Logging level | No | `INFO` |
+| `LOG_FILE` | Log file path | No | `logs/app.log` |
 | `DATABASE_URL` | Database connection URL | No | `sqlite:///app.db` |
 | `MAX_CONTENT_LENGTH` | Max upload size | No | `16MB` |
 
